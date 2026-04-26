@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Geyvak — a multi-domain company built on clarity, honesty, and respect. Services, products, and guidance — under one roof." />
+  <meta name="theme-color" content="#1A1F2E" />
+  <title>Geyvak — Help that respects you.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #14182A; --ink-soft: #2F3548; --ink-mute: #5A6172; --ink-quiet: #8B91A0;
+      --bg: #FAF8F4; --bg-deep: #F1ECE2; --surface: #FFFFFF; --line: #E8E2D6;
+      --accent: #6B7A52; --accent-soft: #A8B286; --accent-deep: #4A5638;
+      --warm: #C9A876; --warm-soft: #E8D4A8;
+      --shadow: 0 8px 32px -12px rgba(20, 24, 42, 0.12);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --radius-lg: 22px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: 'Inter', system-ui, sans-serif; font-size: 17px; line-height: 1.65; color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    @media (max-width: 640px) { body { font-size: 16px; } }
+    img, svg { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    .serif { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: italic; }
+    .container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 32px; }
+    @media (max-width: 640px) { .container { padding: 0 24px; } }
+
+    /* Header */
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(250, 248, 244, 0.85); backdrop-filter: saturate(180%) blur(16px); border-bottom: 1px solid rgba(232, 226, 214, 0.6); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-family: 'Fraunces', serif; font-weight: 400; letter-spacing: -0.02em; font-size: 22px; color: var(--ink); }
+    .brand-mark { width: 36px; height: 36px; }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { font-size: 14.5px; font-weight: 500; color: var(--ink-soft); transition: color 0.2s var(--ease); }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 100px; background: var(--ink); color: var(--bg); font-size: 14px; font-weight: 500; transition: transform 0.25s var(--ease), background 0.25s var(--ease); }
+    .nav-cta:hover { background: var(--ink-soft); transform: translateY(-1px); }
+    .nav-toggle { display: none; width: 40px; height: 40px; border-radius: 100px; align-items: center; justify-content: center; color: var(--ink); }
+    @media (max-width: 800px) { .nav-links, .nav-cta { display: none; } .nav-toggle { display: inline-flex; } }
+    .mobile-menu { display: none; padding: 12px 32px 28px; background: var(--bg); border-bottom: 1px solid var(--line); }
+    .mobile-menu.open { display: block; }
+    .mobile-menu ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+    .mobile-menu a { display: block; padding: 14px 4px; font-size: 15px; color: var(--ink); border-bottom: 1px solid var(--line); }
+    .mobile-menu .nav-cta { display: inline-flex; margin-top: 20px; }
+
+    /* Hero */
+    .hero { position: relative; padding: 120px 0 100px; overflow: hidden; isolation: isolate; }
+    @media (max-width: 768px) { .hero { padding: 72px 0 64px; } }
+    .hero::before { content: ''; position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(168, 178, 134, 0.18), transparent 65%); border-radius: 50%; z-index: -1; }
+    .hero::after { content: ''; position: absolute; bottom: -150px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(201, 168, 118, 0.14), transparent 65%); border-radius: 50%; z-index: -1; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 28px; animation: fadeUp 0.8s var(--ease) both; }
+    .hero-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+    .hero h1 { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: clamp(2.25rem, 5.5vw, 4.25rem); line-height: 1.05; letter-spacing: -0.025em; color: var(--ink); margin: 0 0 28px; max-width: 880px; animation: fadeUp 0.9s var(--ease) 0.1s both; }
+    .hero h1 em { font-style: italic; color: var(--accent-deep); }
+    .hero-lead { font-size: clamp(1.0625rem, 1.6vw, 1.25rem); line-height: 1.6; color: var(--ink-soft); max-width: 620px; margin: 0 0 40px; animation: fadeUp 0.9s var(--ease) 0.2s both; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; animation: fadeUp 0.9s var(--ease) 0.3s both; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 100px; font-size: 15px; font-weight: 500; transition: transform 0.25s var(--ease), background 0.25s var(--ease), box-shadow 0.25s var(--ease); }
+    @media (max-width: 640px) { .btn { padding: 16px 24px; font-size: 15.5px; } }
+    .btn-primary { background: var(--ink); color: var(--bg); }
+    .btn-primary:hover { background: var(--ink-soft); transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn-ghost { color: var(--ink); border: 1px solid var(--line); background: transparent; }
+    .btn-ghost:hover { border-color: var(--ink); transform: translateY(-2px); }
+    .btn svg { width: 16px; height: 16px; }
+
+    .section { padding: 140px 0; }
+    @media (max-width: 768px) { .section { padding: 88px 0; } }
+    .section-eyebrow { display: inline-block; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    .section-title { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: clamp(1.875rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); margin: 0 0 20px; max-width: 720px; }
+    .section-title em { font-style: italic; color: var(--accent-deep); }
+    .section-intro { font-size: 1.0625rem; color: var(--ink-soft); max-width: 600px; margin: 0 0 64px; line-height: 1.65; }
+
+    /* Practices — refined, expandable */
+    .practices-bg { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .practices-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 900px) { .practices-grid { grid-template-columns: 1fr; } }
+    .practice {
+      position: relative;
+      padding: 44px 36px 36px;
+      border-radius: 24px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      transition: transform 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .practice::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--warm));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s var(--ease);
+    }
+    .practice:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-soft);
+      box-shadow: var(--shadow);
+    }
+    .practice:hover::before { transform: scaleX(1); }
+
+    .practice-num {
+      font-family: 'Fraunces', serif; font-style: italic; font-weight: 300;
+      font-size: 0.875rem; color: var(--ink-quiet);
+      letter-spacing: 0.04em; margin-bottom: 28px;
+    }
+    .practice-symbol {
+      width: 64px; height: 64px;
+      margin-bottom: 28px;
+      display: grid; place-items: center;
+      border-radius: 16px;
+      background: linear-gradient(145deg, var(--bg-deep), var(--bg));
+      border: 1px solid var(--line);
+      color: var(--accent-deep);
+      transition: transform 0.4s var(--ease);
+    }
+    .practice:hover .practice-symbol { transform: scale(1.05) rotate(-2deg); }
+    .practice-symbol svg { width: 30px; height: 30px; }
+
+    .practice h3 {
+      font-family: 'Fraunces', serif; font-weight: 400;
+      font-size: 1.625rem; line-height: 1.2;
+      letter-spacing: -0.015em; color: var(--ink);
+      margin: 0 0 14px;
+    }
+    .practice-desc {
+      color: var(--ink-soft);
+      font-size: 14.5px; line-height: 1.65;
+      margin: 0 0 24px;
+      flex-grow: 1;
+    }
+
+    /* Expandable chip area — the "infinite room" */
+    .practice-chips-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-quiet);
+      margin: 0 0 12px;
+    }
+    .practice-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 11px;
+      border-radius: 100px;
+      font-size: 12.5px;
+      font-weight: 500;
+      background: rgba(107, 122, 82, 0.08);
+      color: var(--accent-deep);
+      border: 1px solid rgba(107, 122, 82, 0.16);
+      transition: background 0.2s var(--ease);
+    }
+    .chip:hover { background: rgba(107, 122, 82, 0.14); }
+    .chip.future {
+      background: transparent;
+      color: var(--ink-quiet);
+      border: 1px dashed var(--line);
+      font-style: italic;
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+    }
+    .chip.future:hover { background: rgba(154, 160, 172, 0.06); }
+
+    /* Start where you are — gentle decision flow */
+    .start-here {
+      padding: 100px 0;
+      background: var(--bg);
+    }
+    @media (max-width: 768px) { .start-here { padding: 72px 0; } }
+    .start-head {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 56px;
+    }
+    .start-head .section-eyebrow { display: inline-block; }
+    .start-head h2 {
+      font-family: 'Fraunces', Georgia, serif; font-weight: 400;
+      font-size: clamp(1.625rem, 3.5vw, 2.5rem); line-height: 1.15;
+      letter-spacing: -0.02em; color: var(--ink);
+      margin: 0 0 16px;
+    }
+    .start-head h2 em { font-style: italic; color: var(--accent-deep); }
+    .start-head p {
+      color: var(--ink-soft); font-size: 1.0625rem;
+      line-height: 1.6; margin: 0;
+    }
+    .start-paths {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 940px;
+      margin: 0 auto;
+    }
+    @media (max-width: 800px) { .start-paths { grid-template-columns: 1fr; } }
+    .start-path {
+      padding: 28px 28px 26px;
+      border-radius: 18px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .start-path:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-soft);
+    }
+    .start-path-mood {
+      flex-shrink: 0;
+      width: 44px; height: 44px;
+      display: grid; place-items: center;
+      border-radius: 12px;
+      background: var(--bg-deep);
+      color: var(--accent-deep);
+    }
+    .start-path-mood svg { width: 22px; height: 22px; }
+    .start-path-text { flex: 1; min-width: 0; }
+    .start-path-mood-label {
+      font-family: 'Fraunces', serif; font-style: italic; font-weight: 300;
+      font-size: 0.95rem; color: var(--ink-quiet);
+      margin: 0 0 2px;
+    }
+    .start-path-dest {
+      font-size: 15px; font-weight: 500;
+      color: var(--ink); margin: 0;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .start-path-dest svg {
+      width: 13px; height: 13px;
+      color: var(--accent);
+      transition: transform 0.2s var(--ease);
+    }
+    .start-path:hover .start-path-dest svg { transform: translateX(3px); }
+    .start-path.muted .start-path-dest { color: var(--ink-mute); }
+
+    /* Divisions */
+    .divisions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media (max-width: 1024px) { .divisions-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 700px) { .divisions-grid { grid-template-columns: 1fr; } }
+    .division { position: relative; padding: 40px 32px; border-radius: var(--radius-lg); background: var(--surface); border: 1px solid var(--line); transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease); overflow: hidden; display: flex; flex-direction: column; }
+    .division:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .division.placeholder { background: transparent; border-style: dashed; border-color: var(--line); }
+    .division.placeholder:hover { transform: none; box-shadow: none; border-color: var(--accent-soft); }
+    .division-status { display: inline-flex; align-items: center; gap: 8px; padding: 5px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em; align-self: flex-start; margin-bottom: 20px; }
+    .status-live { background: rgba(107, 122, 82, 0.12); color: var(--accent-deep); }
+    .status-live::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse-quiet 2.4s infinite; }
+    .status-soon { background: rgba(201, 168, 118, 0.16); color: #8A6D3E; }
+    .status-soon::before { content: '✦'; font-size: 9px; color: var(--warm); }
+    .status-future { background: rgba(154, 160, 172, 0.14); color: var(--ink-mute); }
+    .status-future::before { content: '○'; font-size: 11px; line-height: 1; }
+    .division-name { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; font-size: 0.875rem; color: var(--ink-quiet); letter-spacing: 0.02em; margin-bottom: 6px; }
+    .division h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.625rem; line-height: 1.15; letter-spacing: -0.015em; color: var(--ink); margin: 0 0 10px; }
+    .division-tagline { font-size: 13.5px; color: var(--accent); margin-bottom: 18px; font-style: italic; font-family: 'Fraunces', serif; }
+    .division p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.65; margin: 0 0 22px; flex-grow: 1; }
+    .division-features { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 8px; }
+    .division-features li { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--ink-soft); }
+    .division-features li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+    .division-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 500; color: var(--ink); transition: gap 0.2s var(--ease); margin-top: auto; }
+    .division-link:hover { gap: 12px; }
+    .division-link svg { width: 14px; height: 14px; }
+    .division-link.muted { color: var(--ink-quiet); cursor: default; }
+    .placeholder-text { color: var(--ink-mute); font-size: 14px; line-height: 1.6; font-family: 'Fraunces', serif; font-style: italic; font-weight: 300; }
+
+    /* Principles */
+    .principles { background: var(--ink); color: var(--bg); position: relative; overflow: hidden; }
+    .principles::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(168, 178, 134, 0.12), transparent 70%); border-radius: 50%; }
+    .principles .section-eyebrow { color: var(--accent-soft); }
+    .principles .section-title { color: var(--bg); }
+    .principles .section-title em { color: var(--warm-soft); }
+    .principles .section-intro { color: rgba(250, 248, 244, 0.7); }
+    .principles-grid { position: relative; display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 56px; }
+    @media (max-width: 768px) { .principles-grid { grid-template-columns: 1fr; } }
+    .principle { padding: 28px 0; border-bottom: 1px solid rgba(250, 248, 244, 0.08); display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start; }
+    .principle-num { font-family: 'Fraunces', serif; font-style: italic; font-weight: 300; font-size: 1.125rem; color: var(--accent-soft); min-width: 32px; }
+    .principle h4 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.25rem; letter-spacing: -0.01em; margin: 0 0 6px; color: var(--bg); }
+    .principle p { color: rgba(250, 248, 244, 0.7); font-size: 14.5px; line-height: 1.6; margin: 0; }
+    .essence { margin-top: 64px; padding: 40px 48px; border-radius: var(--radius-lg); background: rgba(250, 248, 244, 0.04); border: 1px solid rgba(250, 248, 244, 0.08); text-align: center; }
+    .essence-label { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-soft); margin-bottom: 16px; }
+    .essence p { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(1.25rem, 2.5vw, 1.75rem); line-height: 1.45; letter-spacing: -0.01em; color: var(--bg); margin: 0; max-width: 680px; margin-inline: auto; }
+    .essence p em { color: var(--warm-soft); }
+
+    /* Contact */
+    .contact { padding: 120px 0; text-align: center; }
+    @media (max-width: 768px) { .contact { padding: 80px 0; } }
+    .contact h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(1.75rem, 4vw, 2.75rem); line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 20px; max-width: 680px; margin-inline: auto; }
+    .contact h2 em { font-style: italic; color: var(--accent-deep); }
+    .contact p { font-size: 1.0625rem; color: var(--ink-soft); max-width: 520px; margin: 0 auto 36px; line-height: 1.65; }
+    .contact-options { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+    /* Footer */
+    .site-footer { background: var(--bg-deep); padding: 64px 0 32px; border-top: 1px solid var(--line); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+    .footer-brand p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.65; max-width: 360px; margin: 16px 0 0; }
+    .footer-col h5 { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 18px; }
+    .footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+    .footer-col a { color: var(--ink); font-size: 14.5px; transition: color 0.2s var(--ease); }
+    .footer-col a:hover { color: var(--accent-deep); }
+    .footer-bottom { padding-top: 28px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; color: var(--ink-mute); font-size: 13px; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse-quiet { 0% { box-shadow: 0 0 0 0 rgba(107, 122, 82, 0.4); } 70% { box-shadow: 0 0 0 8px rgba(107, 122, 82, 0); } 100% { box-shadow: 0 0 0 0 rgba(107, 122, 82, 0); } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a href="#" class="brand" aria-label="Geyvak home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="18" stroke="#1A1F2E" stroke-width="1.2" fill="none"/>
+              <path d="M20 8 Q14 14 14 22 Q14 28 20 32 Q26 28 26 22 Q26 14 20 8 Z" fill="none" stroke="#6B7A52" stroke-width="1.2"/>
+              <circle cx="20" cy="20" r="2.5" fill="#C9A876"/>
+            </svg>
+          </span>
+          <span>Geyvak</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#start-here">Start</a></li>
+          <li><a href="#practices">Practices</a></li>
+          <li><a href="#divisions">Divisions</a></li>
+          <li><a href="#principles">Principles</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">
+          Reach out
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" width="22" height="22"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <ul>
+        <li><a href="#start-here">Start</a></li>
+        <li><a href="#practices">Practices</a></li>
+        <li><a href="#divisions">Divisions</a></li>
+        <li><a href="#principles">Principles</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Reach out</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <span class="hero-eyebrow">A multi-domain company</span>
+        <h1>
+          Help that <em>respects you.</em><br>
+          Across services, products, and guidance.
+        </h1>
+        <p class="hero-lead">
+          Geyvak is a small, focused company built on one idea &mdash; that practical help shouldn&rsquo;t come with pressure, confusion, or hidden agendas. Different work, same standard. Built to grow as honestly as it began.
+        </p>
+        <div class="hero-cta">
+          <a href="#divisions" class="btn btn-primary">
+            See what we&rsquo;re building
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#principles" class="btn btn-ghost">Read our principles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICES -->
+    <section class="section practices-bg" id="practices">
+      <div class="container">
+        <span class="section-eyebrow">Our practices</span>
+        <h2 class="section-title">Three buckets. <em>Infinite room</em> inside each.</h2>
+        <p class="section-intro">Whatever Geyvak takes on falls into one of these. Different shapes, same standard &mdash; held together by the principles that guide every decision we make.</p>
+
+        <div class="practices-grid">
+
+          <!-- 01 — SERVICES — Shield -->
+          <div class="practice">
+            <div class="practice-num serif">— 01</div>
+            <div class="practice-symbol" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 4 L26 8 V16 C26 22 21 26 16 28 C11 26 6 22 6 16 V8 Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M11 16 L14.5 19.5 L21 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 4 L16 10" stroke="#C9A876" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+              </svg>
+            </div>
+            <h3>Services</h3>
+            <p class="practice-desc">Real-world expertise, delivered honestly. Things people pay us to do because we&rsquo;re good at them &mdash; and because we won&rsquo;t pressure them while we do.</p>
+            <p class="practice-chips-label">Currently</p>
+            <div class="practice-chips">
+              <span class="chip">IT &amp; networks</span>
+              <span class="chip">Cybersecurity</span>
+              <span class="chip">Managed support</span>
+              <span class="chip future">+ more, when ready</span>
+            </div>
+          </div>
+
+          <!-- 02 — PRODUCTS — Thread -->
+          <div class="practice">
+            <div class="practice-num serif">— 02</div>
+            <div class="practice-symbol" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 8 Q12 4 16 8 T26 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                <path d="M6 14 Q12 10 16 14 T26 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                <path d="M6 20 Q12 16 16 20 T26 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+                <path d="M6 26 Q12 22 16 26 T26 26" fill="none" stroke="#C9A876" stroke-width="1.4" stroke-linecap="round" opacity="0.5"/>
+                <circle cx="6" cy="8" r="1.2" fill="currentColor"/>
+                <circle cx="26" cy="8" r="1.2" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3>Products</h3>
+            <p class="practice-desc">Things we make &mdash; physical, digital, or both. Platforms, tools, and goods designed to earn their place in your life without hooking you to use them.</p>
+            <p class="practice-chips-label">Currently</p>
+            <div class="practice-chips">
+              <span class="chip">Custom outfits</span>
+              <span class="chip future">+ apps, tools, goods</span>
+            </div>
+          </div>
+
+          <!-- 03 — GUIDANCE — Compass -->
+          <div class="practice">
+            <div class="practice-num serif">— 03</div>
+            <div class="practice-symbol" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="1.4"/>
+                <circle cx="16" cy="16" r="7" fill="none" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+                <path d="M16 9 L19 16 L16 23 L13 16 Z" fill="#C9A876" opacity="0.6" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                <circle cx="16" cy="16" r="1.4" fill="currentColor"/>
+                <line x1="16" y1="3" x2="16" y2="5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <line x1="16" y1="27" x2="16" y2="29" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+                <line x1="3" y1="16" x2="5" y2="16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+                <line x1="27" y1="16" x2="29" y2="16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+              </svg>
+            </div>
+            <h3>Guidance</h3>
+            <p class="practice-desc">Honest help choosing well &mdash; comparisons, recommendations, second opinions. No affiliate bias. No dark patterns. Just clear thinking, shared openly.</p>
+            <p class="practice-chips-label">In development</p>
+            <div class="practice-chips">
+              <span class="chip future">Comparisons</span>
+              <span class="chip future">Recommendations</span>
+              <span class="chip future">Decision tools</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- START WHERE YOU ARE — gentle decision flow -->
+    <section class="start-here" id="start-here">
+      <div class="container">
+        <div class="start-head">
+          <span class="section-eyebrow">Start where you are</span>
+          <h2>Not sure what you need? <em>Start with how you feel.</em></h2>
+          <p>No funnel. No quiz. Just three honest paths &mdash; choose whichever sounds like you right now.</p>
+        </div>
+
+        <div class="start-paths">
+
+          <a href="#divisions" class="start-path">
+            <span class="start-path-mood" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </span>
+            <div class="start-path-text">
+              <p class="start-path-mood-label">Something needs fixing</p>
+              <p class="start-path-dest">
+                See our services
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </p>
+            </div>
+          </a>
+
+          <a href="#divisions" class="start-path">
+            <span class="start-path-mood" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </span>
+            <div class="start-path-text">
+              <p class="start-path-mood-label">There&rsquo;s something I want</p>
+              <p class="start-path-dest">
+                Browse what we make
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </p>
+            </div>
+          </a>
+
+          <a href="#contact" class="start-path muted">
+            <span class="start-path-mood" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </span>
+            <div class="start-path-text">
+              <p class="start-path-mood-label">I&rsquo;m not sure yet</p>
+              <p class="start-path-dest">
+                Just say hello
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DIVISIONS -->
+    <section class="section" id="divisions">
+      <div class="container">
+        <span class="section-eyebrow">What we&rsquo;re currently building</span>
+        <h2 class="section-title">Divisions <em>under the Geyvak roof</em>.</h2>
+        <p class="section-intro">Each division is its own focused work, with its own audience and its own craft &mdash; all answering to the same standard. The roof is open for what comes next.</p>
+
+        <div class="divisions-grid">
+
+          <article class="division">
+            <span class="division-status status-live">Live</span>
+            <div class="division-name serif">Service &middot; Division 01</div>
+            <h3>Safe Cyber Connection</h3>
+            <p class="division-tagline">Seamless connection with secured network.</p>
+            <p>Network design, cybersecurity, and managed IT support for businesses &mdash; without the pressure tactics that usually come with IT vendors.</p>
+            <ul class="division-features">
+              <li>Network setup &amp; structured cabling</li>
+              <li>Cybersecurity &amp; threat protection</li>
+              <li>Managed IT support &amp; helpdesk</li>
+              <li>Cloud &amp; infrastructure</li>
+            </ul>
+            <a href="#" class="division-link">
+              Visit Safe Cyber Connection
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <article class="division">
+            <span class="division-status status-soon">In development</span>
+            <div class="division-name serif">Product &middot; Division 02</div>
+            <h3>Unnahana</h3>
+            <p class="division-tagline">Wear what you imagine.</p>
+            <p>A custom-outfit platform. Choose your fabric, design, and tailoring &mdash; and we bring your idea to life. Any style, any budget, delivered to your door.</p>
+            <ul class="division-features">
+              <li>Choose your own fabric</li>
+              <li>Design your style &mdash; ethnic, western, or original</li>
+              <li>Custom tailoring to your measurements</li>
+              <li>Doorstep delivery worldwide</li>
+            </ul>
+            <span class="division-link muted">Coming soon</span>
+          </article>
+
+          <article class="division placeholder">
+            <span class="division-status status-future">Open</span>
+            <div class="division-name serif">What&rsquo;s next</div>
+            <h3>More to come.</h3>
+            <p class="placeholder-text">The Geyvak roof is open for what comes next &mdash; new services, new products, new ways of helping. Built only when there&rsquo;s a real reason, never to fill a slot.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLES -->
+    <section class="section principles" id="principles">
+      <div class="container">
+        <span class="section-eyebrow">Our principles</span>
+        <h2 class="section-title">How <em>we work</em>, every time.</h2>
+        <p class="section-intro">These aren&rsquo;t marketing values. They&rsquo;re the filter every Geyvak decision passes through &mdash; from the smallest button to the biggest engagement.</p>
+        <div class="principles-grid">
+          <div class="principle"><div class="principle-num">01</div><div><h4>Clarity over confusion</h4><p>We don&rsquo;t profit from making people feel lost, rushed, or overwhelmed.</p></div></div>
+          <div class="principle"><div class="principle-num">02</div><div><h4>Value over pressure</h4><p>We help people choose what fits their life &mdash; not what creates the fastest sale.</p></div></div>
+          <div class="principle"><div class="principle-num">03</div><div><h4>People before conversion</h4><p>You&rsquo;re not a click, lead, or transaction. Your time, money, and attention deserve respect.</p></div></div>
+          <div class="principle"><div class="principle-num">04</div><div><h4>Honest guidance</h4><p>We explain why something is recommended &mdash; openly, with reasoning you can check.</p></div></div>
+          <div class="principle"><div class="principle-num">05</div><div><h4>Budget dignity</h4><p>Being budget-conscious isn&rsquo;t weakness. We support smart choices without judgment.</p></div></div>
+          <div class="principle"><div class="principle-num">06</div><div><h4>Independence and trust</h4><p>User trust comes before affiliate income, partnerships, or commercial pressure.</p></div></div>
+          <div class="principle"><div class="principle-num">07</div><div><h4>Useful technology</h4><p>Tech should make life easier &mdash; not more manipulative, addictive, or confusing.</p></div></div>
+          <div class="principle"><div class="principle-num">08</div><div><h4>Calm decision-making</h4><p>You should leave Geyvak feeling clearer, lighter, and more confident &mdash; not pressured.</p></div></div>
+          <div class="principle"><div class="principle-num">09</div><div><h4>No dark patterns</h4><p>No fake urgency, misleading discounts, hidden bias, or fear-based selling. Ever.</p></div></div>
+          <div class="principle"><div class="principle-num">10</div><div><h4>Care in commerce</h4><p>Money, homes, families, peace of mind &mdash; commerce touches all of these. We treat that with care.</p></div></div>
+        </div>
+        <div class="essence">
+          <div class="essence-label">In one line</div>
+          <p>Geyvak stands for <em>clear, honest, human-centered decisions</em> &mdash; protecting people from pressure, confusion, and poor-value choices.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Got something we can <em>actually help with?</em></h2>
+        <p>Whether it&rsquo;s an IT problem, a custom outfit idea, or just curiosity about what we&rsquo;re building &mdash; reach out. No pressure. No funnels.</p>
+        <div class="contact-options">
+          <a href="mailto:hello@geyvak.com" class="btn btn-primary">
+            hello@geyvak.com
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#divisions" class="btn btn-ghost">Browse divisions</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="18" stroke="#1A1F2E" stroke-width="1.2" fill="none"/>
+                <path d="M20 8 Q14 14 14 22 Q14 28 20 32 Q26 28 26 22 Q26 14 20 8 Z" fill="none" stroke="#6B7A52" stroke-width="1.2"/>
+                <circle cx="20" cy="20" r="2.5" fill="#C9A876"/>
+              </svg>
+            </span>
+            <span>Geyvak</span>
+          </a>
+          <p>A multi-domain company. Services, products, and guidance &mdash; built on clarity, honesty, and respect.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Divisions</h5>
+          <ul>
+            <li><a href="#divisions">Safe Cyber Connection</a></li>
+            <li><a href="#divisions">Unnahana</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="mailto:hello@geyvak.com">hello@geyvak.com</a></li>
+            <li><a href="#principles">Our principles</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Geyvak. Built with care.</span>
+        <span class="serif">geyvak.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const toggle = document.getElementById('navToggle');
+      const menu = document.getElementById('mobileMenu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', function() {
+        const isOpen = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+        if (isOpen) menu.removeAttribute('hidden');
+        else menu.setAttribute('hidden', '');
+      });
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+          menu.setAttribute('hidden', '');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
