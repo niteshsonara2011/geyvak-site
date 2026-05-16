@@ -290,8 +290,27 @@
       text-transform: uppercase;
     }
 
+    .photo-slot.has-image {
+      padding: 0;
+      min-height: 300px;
+      background: #14182A;
+      overflow: hidden;
+    }
+
+    .photo-slot img {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
     .photo-content {
       padding: 26px;
+    }
+
+    .photo-content p + p {
+      margin-top: 12px;
     }
 
     .photo-note {
@@ -487,20 +506,23 @@
 
         <div class="photo-grid">
           <article class="card photo-card">
-            <div class="photo-slot">Photo slot</div>
+            <div class="photo-slot has-image">
+              <img src="/queerbazar/images/floral-gold-jewellery-set.svg" alt="Floral gold-tone jewellery set laid on dark fabric" loading="lazy" />
+            </div>
             <div class="photo-content">
-              <span class="tag">Clothes</span>
-              <h3>Tops, bottoms & layers</h3>
-              <p>Photos will show colour, fabric, texture, fit direction, and whether the piece is best for daily wear, travel, styling, or performance.</p>
+              <span class="tag">Accessories</span>
+              <h3>Floral gold-tone jewellery set</h3>
+              <p>Statement floral neckpiece with matching decorative pieces in a gold-tone finish. Best suited for styling, costume, performance, festive wear, or creative looks.</p>
+              <p>Currently offered as a bundle, with separate-piece interest considered on request.</p>
             </div>
           </article>
 
           <article class="card photo-card">
             <div class="photo-slot">Photo slot</div>
             <div class="photo-content">
-              <span class="tag">Accessories</span>
-              <h3>Scarves, bags & accents</h3>
-              <p>Photos will be added for items where shape, shine, colour, pattern, or styling potential cannot be explained clearly with text alone.</p>
+              <span class="tag">Clothes</span>
+              <h3>Tops, bottoms & layers</h3>
+              <p>Photos will show colour, fabric, texture, fit direction, and whether the piece is best for daily wear, travel, styling, or performance.</p>
             </div>
           </article>
 
