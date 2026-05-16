@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="QueerBazar by Geyvak — a reuse-first travel-light exchange market for respectful offers, useful exchanges, and meaningful items." />
+  <meta name="description" content="QueerBazar by Geyvak — a reuse-first travel-light exchange market for respectful offers, useful exchanges, vouchers, and meaningful personal items." />
   <title>QueerBazar — Geyvak</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,6 +71,7 @@
       gap: 12px;
       font-family: Fraunces, Georgia, serif;
       font-size: 22px;
+      flex: 0 0 auto;
     }
 
     .mark {
@@ -92,11 +93,13 @@
 
     .nav-links {
       display: flex;
-      gap: 22px;
+      gap: 20px;
       align-items: center;
       color: var(--soft);
       font-size: 14px;
       font-weight: 600;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .button {
@@ -259,6 +262,51 @@
       font-size: 15px;
     }
 
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .photo-card {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .photo-slot {
+      min-height: 220px;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(185, 122, 122, 0.16), transparent 36%),
+        radial-gradient(circle at 80% 30%, rgba(107, 122, 82, 0.14), transparent 34%),
+        linear-gradient(135deg, #F1ECE2, #FAF8F4);
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .photo-content {
+      padding: 26px;
+    }
+
+    .photo-note {
+      margin-top: 30px;
+      padding: 22px 24px;
+      border-radius: 20px;
+      background: rgba(107, 122, 82, 0.09);
+      color: var(--soft);
+      border: 1px solid rgba(107, 122, 82, 0.16);
+    }
+
+    .photo-note strong {
+      color: var(--ink);
+    }
+
     .note {
       background: var(--ink);
       color: var(--bg);
@@ -311,12 +359,13 @@
       flex-wrap: wrap;
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
       .nav-links {
         display: none;
       }
 
-      .grid {
+      .grid,
+      .photo-grid {
         grid-template-columns: 1fr;
       }
 
@@ -342,6 +391,8 @@
 
         <div class="nav-links">
           <a href="#market">Market</a>
+          <a href="#available">Available</a>
+          <a href="#style">Style photos</a>
           <a href="#exchange">Exchanges</a>
           <a href="#contact">Contact</a>
         </div>
@@ -363,7 +414,7 @@
 
         <div class="actions">
           <a class="button" href="#market">See the market</a>
-          <a class="button secondary" href="#exchange">Useful exchange list</a>
+          <a class="button secondary" href="#style">Personal item photos</a>
         </div>
       </div>
     </section>
@@ -402,32 +453,74 @@
       <div class="container">
         <h2>First available categories.</h2>
         <p class="intro">
-          The first listings are being prepared from a small launch batch. Current items include electronics, study tools, art materials, home items, and selected clothing bundles.
+          The first listings are being prepared from a small launch batch. Known products are listed text-first. Photos are reserved for clothes, accessories, costume pieces, and personal-style items where colour, texture, and character matter.
         </p>
 
         <div class="grid">
           <article class="card">
-            <span class="tag">Electronics</span>
-            <h3>Working tech</h3>
-            <p>Apple Watch, Kobo eReader, AirPods earbuds, and other working tech released for reuse.</p>
+            <span class="tag">Text-only</span>
+            <h3>Known tech & branded items</h3>
+            <p>Apple Watch, Kobo eReader, AirPods earbuds, nail lamp, and other known products are listed by condition and inclusions. Photos are available on request.</p>
           </article>
 
           <article class="card">
             <span class="tag">Creative</span>
             <h3>Art, study & learning</h3>
-            <p>Sketchbooks, colour sets, reading tools, and starter reading materials where legally shareable.</p>
+            <p>Sketchbooks, colour sets, reading tools, and starter reading materials where legally shareable can be discussed through DM or the Geyvak chat.</p>
           </article>
 
           <article class="card">
-            <span class="tag">Home</span>
-            <h3>Travel-light extras</h3>
-            <p>Useful home pieces, storage items, and practical objects that still have life in them.</p>
+            <span class="tag">Photo-led</span>
+            <h3>Personal style items</h3>
+            <p>Clothes, accessories, styling pieces, bags, scarves, jewellery, and performance extras will use real photos when each batch is ready.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="alt" id="exchange">
+    <section class="alt" id="style">
+      <div class="container">
+        <h2>Personal style items will be <em>photo-led.</em></h2>
+        <p class="intro">
+          Photos are used only where the actual look matters: clothing, accessories, costume pieces, bags, scarves, jewellery, and unique personal bundles. Common tech and known products stay text-first to keep the page clean and private.
+        </p>
+
+        <div class="photo-grid">
+          <article class="card photo-card">
+            <div class="photo-slot">Photo slot</div>
+            <div class="photo-content">
+              <span class="tag">Clothes</span>
+              <h3>Tops, bottoms & layers</h3>
+              <p>Photos will show colour, fabric, texture, fit direction, and whether the piece is best for daily wear, travel, styling, or performance.</p>
+            </div>
+          </article>
+
+          <article class="card photo-card">
+            <div class="photo-slot">Photo slot</div>
+            <div class="photo-content">
+              <span class="tag">Accessories</span>
+              <h3>Scarves, bags & accents</h3>
+              <p>Photos will be added for items where shape, shine, colour, pattern, or styling potential cannot be explained clearly with text alone.</p>
+            </div>
+          </article>
+
+          <article class="card photo-card">
+            <div class="photo-slot">Photo slot</div>
+            <div class="photo-content">
+              <span class="tag">Performance</span>
+              <h3>Costume & creative pieces</h3>
+              <p>Unique styling pieces, DIY items, and performance extras will be shown with simple photos and short notes about condition and use.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="photo-note">
+          <strong>Photo safety:</strong> product photos should avoid addresses, private notes, serial numbers, account screens, documents, and unnecessary personal details. Clean simple photos are enough.
+        </div>
+      </div>
+    </section>
+
+    <section id="exchange">
       <div class="container">
         <h2>Useful travel-light <em>exchanges welcome.</em></h2>
         <p class="intro">
@@ -442,18 +535,18 @@
             lightweight tablet setup, strong power bank, compact tripod, portable light, packing cubes,
             dry bag, travel rain cover, busking signage board, or other practical travel/project gear.
           </p>
-                    <p style="margin-top: 18px;">
+          <p style="margin-top: 18px;">
             Voucher offers are welcome where useful and verifiable, including Amazon AU, JB Hi-Fi, supermarket, transport, travel, or accommodation vouchers. Vouchers must be valid, unused, transferable, and confirmed before handover.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <section class="alt" id="contact">
       <div class="container">
         <h2>Make a respectful offer.</h2>
         <p class="intro">
-          To ask about an item, send the item name and your respectful offer or useful exchange idea through Instagram DM first.
+          To ask about an item, send the item name and your respectful money offer, useful exchange, voucher offer, or mixed offer through Instagram DM first.
           WhatsApp may be used later for confirmed buyers.
         </p>
 
