@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="QueerBazar by Geyvak — a reuse-first travel-light exchange market for respectful offers, useful exchanges, and meaningful items." />
+  <title>QueerBazar — Geyvak</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #14182A;
+      --soft: #3F465A;
+      --muted: #6E7482;
+      --bg: #FAF8F4;
+      --surface: #FFFFFF;
+      --line: #E8E2D6;
+      --earth: #6B7A52;
+      --rose: #B97A7A;
+      --gold: #C9A876;
+      --shadow: 0 18px 45px rgba(20, 24, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.65;
+      font-size: 17px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(250, 248, 244, 0.9);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(14px);
+      z-index: 10;
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: Fraunces, Georgia, serif;
+      font-size: 22px;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      border: 1.3px solid var(--ink);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+    }
+
+    .mark::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      color: var(--soft);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 13px 22px;
+      background: var(--ink);
+      color: var(--bg);
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .hero {
+      padding: 92px 0 76px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      right: -180px;
+      top: -190px;
+      background: radial-gradient(circle, rgba(185, 122, 122, 0.18), transparent 65%);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      left: -160px;
+      bottom: -180px;
+      background: radial-gradient(circle, rgba(107, 122, 82, 0.16), transparent 65%);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--earth);
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 1px;
+      background: var(--earth);
+    }
+
+    h1, h2, h3 {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      line-height: 1.08;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      max-width: 900px;
+      margin: 0 0 24px;
+    }
+
+    h1 em, h2 em {
+      color: var(--rose);
+      font-style: italic;
+    }
+
+    .lead {
+      max-width: 720px;
+      color: var(--soft);
+      font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+      margin: 0 0 34px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    section {
+      padding: 84px 0;
+    }
+
+    .alt {
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 4vw, 3.1rem);
+      margin: 0 0 18px;
+      max-width: 760px;
+    }
+
+    .intro {
+      max-width: 720px;
+      color: var(--soft);
+      margin: 0 0 38px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .alt .card {
+      background: var(--bg);
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(107, 122, 82, 0.12);
+      color: var(--earth);
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 1.45rem;
+      margin: 0 0 10px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--soft);
+      font-size: 15px;
+    }
+
+    .note {
+      background: var(--ink);
+      color: var(--bg);
+      border-radius: 26px;
+      padding: 34px;
+    }
+
+    .note p {
+      color: rgba(250, 248, 244, 0.78);
+      margin: 0;
+    }
+
+    ul {
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    li {
+      color: var(--soft);
+      display: flex;
+      gap: 10px;
+      font-size: 15px;
+    }
+
+    li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--earth);
+      border-radius: 50%;
+      margin-top: 10px;
+      flex: 0 0 auto;
+    }
+
+    footer {
+      padding: 40px 0;
+      background: #F1ECE2;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 64px 0 54px;
+      }
+
+      section {
+        padding: 62px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="/">
+          <span class="mark" aria-hidden="true"></span>
+          <span>Geyvak</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#market">Market</a>
+          <a href="#exchange">Exchanges</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <a class="button" href="#contact">Make an offer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Pilot project by Geyvak</span>
+        <h1>QueerBazar — a <em>travel-light</em> exchange market.</h1>
+        <p class="lead">
+          Meaningful personal items are being released with care so they can be reused, repurposed, and kept out of storage or waste.
+          Respectful money offers, useful exchanges, and mixed offers are welcome.
+        </p>
+
+        <div class="actions">
+          <a class="button" href="#market">See the market</a>
+          <a class="button secondary" href="#exchange">Useful exchange list</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="market">
+      <div class="container">
+        <h2>Released with care, <em>not dumped.</em></h2>
+        <p class="intro">
+          This is a temporary reuse-first marketplace connected to Backpacking Nature to Explore Myself —
+          a journey of nature, movement, poetry, busking, and lighter living.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <span class="tag">Offer</span>
+            <h3>Respectful money offers</h3>
+            <p>If an item connects with you, send the item name and the amount that feels fair.</p>
+          </article>
+
+          <article class="card">
+            <span class="tag">Exchange</span>
+            <h3>Useful exchanges</h3>
+            <p>Clean, working, lightweight items that support travel, mobile work, study, busking, or creative projects are welcome.</p>
+          </article>
+
+          <article class="card">
+            <span class="tag">Handover</span>
+            <h3>Melbourne-based</h3>
+            <p>Pickup is arranged safely. Local delivery or shipping may be available for suitable items at buyer cost.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="available">
+      <div class="container">
+        <h2>First available categories.</h2>
+        <p class="intro">
+          The first listings are being prepared from a small launch batch. Current items include electronics, study tools, art materials, home items, and selected clothing bundles.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <span class="tag">Electronics</span>
+            <h3>Working tech</h3>
+            <p>Apple Watch, Kobo eReader, AirPods earbuds, and other working tech released for reuse.</p>
+          </article>
+
+          <article class="card">
+            <span class="tag">Creative</span>
+            <h3>Art, study & learning</h3>
+            <p>Sketchbooks, colour sets, reading tools, and starter reading materials where legally shareable.</p>
+          </article>
+
+          <article class="card">
+            <span class="tag">Home</span>
+            <h3>Travel-light extras</h3>
+            <p>Useful home pieces, storage items, and practical objects that still have life in them.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="exchange">
+      <div class="container">
+        <h2>Useful travel-light <em>exchanges welcome.</em></h2>
+        <p class="intro">
+          We only accept exchanges that are clean, working, lightweight, and genuinely useful for the journey.
+          Bulky items are accepted only if they solve an immediate need.
+        </p>
+
+        <div class="note">
+          <h3>Current exchange wishlist</h3>
+          <p>
+            Lightweight folding table, tablet or phone stand, Bluetooth keyboard, compact mouse,
+            lightweight tablet setup, strong power bank, compact tripod, portable light, packing cubes,
+            dry bag, travel rain cover, busking signage board, or other practical travel/project gear.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Make a respectful offer.</h2>
+        <p class="intro">
+          To ask about an item, send the item name and your respectful offer or useful exchange idea through Instagram DM first.
+          WhatsApp may be used later for confirmed buyers.
+        </p>
+
+        <div class="actions">
+          <a class="button" href="https://instagram.com/terpsichore_reva" target="_blank" rel="noopener">DM @terpsichore_reva</a>
+          <a class="button secondary" href="/">Back to Geyvak</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>QueerBazar by Geyvak</span>
+      <span>Built with care to serve nature. We walk with you, not ahead of you.</span>
+    </div>
+  </footer>
+</body>
+</html>
