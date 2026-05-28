@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Geyvak is built with care to serve nature. We walk with you, not ahead of you — practical, ethical help across services, products, and AI literacy." />
+<meta name="description" content="Geyvak provides practical IT services, custom clothing, and online coaching with clarity, patience, and respect." />
 
 <meta name="theme-color" content="#1A1F2E" />
 
-<title>Geyvak — Built with care to serve nature.</title>
+<title>Geyvak — Practical services built with care.</title>
 
 <link rel="icon" type="image/png" href="/favicon.png" sizes="96x96" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-<meta property="og:title" content="Geyvak — Built with care to serve nature." />
-<meta property="og:description" content="We walk with you, not ahead of you." />
+<meta property="og:title" content="Geyvak — Practical services built with care." />
+<meta property="og:description" content="IT services, custom clothing, and online coaching with clarity, patience, and respect." />
 <meta property="og:image" content="https://geyvak.com/og-image.png" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Geyvak — Built with care to serve nature." />
-<meta name="twitter:description" content="We walk with you, not ahead of you." />
+<meta name="twitter:title" content="Geyvak — Practical services built with care." />
+<meta name="twitter:description" content="IT services, custom clothing, and online coaching with clarity, patience, and respect." />
 <meta name="twitter:image" content="https://geyvak.com/og-image.png" />  
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,7 +63,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .mobile-menu a { display: block; padding: 14px 4px; font-size: 15px; color: var(--ink); border-bottom: 1px solid var(--line); }
 .mobile-menu .nav-cta { display: inline-flex; margin-top: 20px; }
 
-/* Hero — concrete, benefit-led */
+/* Hero */
 .hero { position: relative; padding: 110px 0 80px; overflow: hidden; isolation: isolate; }
 @media (max-width: 768px) { .hero { padding: 64px 0 56px; } }
 .hero::before { content: ''; position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(168, 178, 134, 0.18), transparent 65%); border-radius: 50%; z-index: -1; }
@@ -72,7 +72,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
 .hero h1 { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: clamp(2.25rem, 5.5vw, 4rem); line-height: 1.05; letter-spacing: -0.025em; color: var(--ink); margin: 0 0 24px; max-width: 880px; animation: fadeUp 0.9s var(--ease) 0.1s both; }
 .hero h1 em { font-style: italic; color: var(--accent-deep); }
-.hero-lead { font-size: clamp(1.0625rem, 1.6vw, 1.2rem); line-height: 1.6; color: var(--ink-soft); max-width: 640px; margin: 0 0 36px; animation: fadeUp 0.9s var(--ease) 0.2s both; }
+.hero-lead { font-size: clamp(1.0625rem, 1.6vw, 1.2rem); line-height: 1.6; color: var(--ink-soft); max-width: 680px; margin: 0 0 36px; animation: fadeUp 0.9s var(--ease) 0.2s both; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; animation: fadeUp 0.9s var(--ease) 0.3s both; }
 .btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 100px; font-size: 15px; font-weight: 500; transition: transform 0.25s var(--ease), background 0.25s var(--ease), box-shadow 0.25s var(--ease); }
 @media (max-width: 640px) { .btn { padding: 16px 24px; font-size: 15.5px; } }
@@ -87,34 +87,28 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .section-eyebrow { display: inline-block; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
 .section-title { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: clamp(1.875rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); margin: 0 0 20px; max-width: 720px; }
 .section-title em { font-style: italic; color: var(--accent-deep); }
-.section-intro { font-size: 1.0625rem; color: var(--ink-soft); max-width: 600px; margin: 0 0 56px; line-height: 1.65; }
+.section-intro { font-size: 1.0625rem; color: var(--ink-soft); max-width: 650px; margin: 0 0 56px; line-height: 1.65; }
 
-/* Divisions — promoted to top, three real cards */
-.divisions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-@media (max-width: 1024px) { .divisions-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 700px) { .divisions-grid { grid-template-columns: 1fr; } }
-.division { position: relative; padding: 40px 32px; border-radius: var(--radius-lg); background: var(--surface); border: 1px solid var(--line); transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease); overflow: hidden; display: flex; flex-direction: column; }
-.division:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.division-status { display: inline-flex; align-items: center; gap: 8px; padding: 5px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em; align-self: flex-start; margin-bottom: 20px; }
-.status-live { background: rgba(107, 122, 82, 0.12); color: var(--accent-deep); }
-.status-live::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse-quiet 2.4s infinite; }
-.status-soon { background: rgba(201, 168, 118, 0.16); color: #8A6D3E; }
-.status-soon::before { content: '✦'; font-size: 9px; color: var(--warm); }
-.status-beta { background: rgba(107, 122, 82, 0.12); color: var(--accent-deep); }
-.status-beta::before { content: '◐'; font-size: 10px; color: var(--accent); }
-.division-name { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; font-size: 0.875rem; color: var(--ink-quiet); letter-spacing: 0.02em; margin-bottom: 6px; }
-.division h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.625rem; line-height: 1.15; letter-spacing: -0.015em; color: var(--ink); margin: 0 0 10px; }
-.division-tagline { font-size: 13.5px; color: var(--accent); margin-bottom: 18px; font-style: italic; font-family: 'Fraunces', serif; }
-.division p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.65; margin: 0 0 22px; flex-grow: 1; }
-.division-features { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 8px; }
-.division-features li { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--ink-soft); }
-.division-features li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
-.division-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 500; color: var(--ink); transition: gap 0.2s var(--ease); margin-top: auto; }
-.division-link:hover { gap: 12px; }
-.division-link svg { width: 14px; height: 14px; }
-.division-link.muted { color: var(--ink-quiet); cursor: default; }
+/* Services */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .services-grid { grid-template-columns: 1fr; } }
+.service-card { position: relative; padding: 40px 32px; border-radius: var(--radius-lg); background: var(--surface); border: 1px solid var(--line); transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease); overflow: hidden; display: flex; flex-direction: column; }
+.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.service-status { display: inline-flex; align-items: center; gap: 8px; padding: 5px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em; align-self: flex-start; margin-bottom: 20px; background: rgba(107, 122, 82, 0.12); color: var(--accent-deep); }
+.service-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse-quiet 2.4s infinite; }
+.service-name { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; font-size: 0.875rem; color: var(--ink-quiet); letter-spacing: 0.02em; margin-bottom: 6px; }
+.service-card h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.625rem; line-height: 1.15; letter-spacing: -0.015em; color: var(--ink); margin: 0 0 10px; }
+.service-tagline { font-size: 13.5px; color: var(--accent); margin-bottom: 18px; font-style: italic; font-family: 'Fraunces', serif; }
+.service-card p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.65; margin: 0 0 22px; flex-grow: 1; }
+.service-features { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 8px; }
+.service-features li { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--ink-soft); }
+.service-features li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.service-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 500; color: var(--ink); transition: gap 0.2s var(--ease); margin-top: auto; }
+.service-link:hover { gap: 12px; }
+.service-link svg { width: 14px; height: 14px; }
 
-/* Why short — distilled principles teaser */
+/* Why */
 .why-bg { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 8px; }
 @media (max-width: 800px) { .why-grid { grid-template-columns: 1fr; } }
@@ -125,7 +119,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .why-link:hover { gap: 12px; }
 .why-link svg { width: 14px; height: 14px; }
 
-/* Principles (kept, full set, lower) */
+/* Principles */
 .principles { background: var(--ink); color: var(--bg); position: relative; overflow: hidden; }
 .principles::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(168, 178, 134, 0.12), transparent 70%); border-radius: 50%; }
 .principles .section-eyebrow { color: var(--accent-soft); }
@@ -148,14 +142,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (max-width: 768px) { .contact { padding: 72px 0; } }
 .contact h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(1.75rem, 4vw, 2.75rem); line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 20px; max-width: 680px; margin-inline: auto; }
 .contact h2 em { font-style: italic; color: var(--accent-deep); }
-.contact p { font-size: 1.0625rem; color: var(--ink-soft); max-width: 520px; margin: 0 auto 36px; line-height: 1.65; }
+.contact p { font-size: 1.0625rem; color: var(--ink-soft); max-width: 560px; margin: 0 auto 36px; line-height: 1.65; }
 .contact-options { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 
 /* Footer */
 .site-footer { background: var(--bg-deep); padding: 64px 0 32px; border-top: 1px solid var(--line); }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
 @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
-.footer-brand p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.65; max-width: 360px; margin: 16px 0 0; }
+.footer-brand p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.65; max-width: 390px; margin: 16px 0 0; }
 .footer-col h5 { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 18px; }
 .footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .footer-col a { color: var(--ink); font-size: 14.5px; transition: color 0.2s var(--ease); }
@@ -183,13 +177,13 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
         <span>Geyvak</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#divisions">What we do</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#why">Why us</a></li>
         <li><a href="#principles">Principles</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#contact" class="nav-cta">
-        Reach out
+        Contact Geyvak
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -199,182 +193,160 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   </div>
   <div class="mobile-menu" id="mobileMenu" hidden>
     <ul>
-      <li><a href="#divisions">What we do</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#why">Why us</a></li>
       <li><a href="#principles">Principles</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Reach out</a>
+    <a href="#contact" class="nav-cta">Contact Geyvak</a>
   </div>
 </header>
 
 <main>
-  <!-- HERO — concrete + benefit-led -->
   <section class="hero">
     <div class="container">
-      <span class="hero-eyebrow">A small company doing three things well</span>
+      <span class="hero-eyebrow">Practical services built with care</span>
       <h1>
-        Careful work, <em>three ways.</em>
+        Clear help for <em>technology, clothing, and learning.</em>
       </h1>
       <p class="hero-lead">
-        We run business IT and cybersecurity, tailor custom outfits to your design, and build an AI shopping companion that helps you decide well &mdash; without the upsell. One company, three crafts, the same standard across all of them.
+        Geyvak provides practical IT services, custom clothing, and online coaching with clarity, patience, and respect. We help people solve everyday needs without confusion, pressure, or rushed decisions.
       </p>
       <div class="hero-cta">
-        <a href="#divisions" class="btn btn-primary">
-          See what we do
+        <a href="#services" class="btn btn-primary">
+          View services
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="https://reva-kappa-one.vercel.app/" class="btn btn-ghost" target="_blank" rel="noopener">
-          Try Geyvak (chat)
+        <a href="#contact" class="btn btn-ghost">
+          Contact Geyvak
         </a>
       </div>
     </div>
   </section>
 
-  <!-- DIVISIONS — promoted to top -->
-  <section class="section" id="divisions">
+  <section class="section" id="services">
     <div class="container">
-      <span class="section-eyebrow">What we do</span>
-      <h2 class="section-title">Three real things, <em>made carefully.</em></h2>
-      <p class="section-intro">Each of these is its own work, with its own customers and its own craft. They share one rule: we serve the person paying us, not the next sale.</p>
+      <span class="section-eyebrow">What we offer</span>
+      <h2 class="section-title">Three services, <em>one careful standard.</em></h2>
+      <p class="section-intro">Each service is practical, human, and clear. We explain what can be done, what cannot be promised, and what the next useful step should be.</p>
 
-      <div class="divisions-grid">
-        <article class="division">
-          <span class="division-status status-live">Live</span>
-          <div class="division-name serif">Service &middot; for businesses</div>
-          <h3>Safe Cyber Connection</h3>
-          <p class="division-tagline">IT &amp; cybersecurity, without the sales pressure.</p>
-          <p>Network design, threat protection, and managed support for small and mid-sized businesses. We tell you what you need &mdash; and what you don&rsquo;t &mdash; in plain language.</p>
-          <ul class="division-features">
-            <li>Network setup &amp; structured cabling</li>
-            <li>Cybersecurity &amp; threat protection</li>
-            <li>Managed IT support &amp; helpdesk</li>
-            <li>Cloud &amp; infrastructure</li>
+      <div class="services-grid">
+        <article class="service-card">
+          <span class="service-status">Available</span>
+          <div class="service-name serif">Service &middot; technology support</div>
+          <h3>IT Services</h3>
+          <p class="service-tagline">Simple technology help without jargon.</p>
+          <p>Practical support for devices, setup, software, online accounts, websites, basic cybersecurity, and everyday digital confidence.</p>
+          <ul class="service-features">
+            <li>Device setup and troubleshooting</li>
+            <li>Software and account guidance</li>
+            <li>Basic cybersecurity support</li>
+            <li>Website and digital setup help</li>
           </ul>
-          <a href="#contact" class="division-link">
-            Talk to us
+          <a href="#contact" class="service-link">
+            Ask for IT support
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </article>
 
-        <article class="division">
-          <span class="division-status status-beta">Beta</span>
-          <div class="division-name serif">Product &middot; for shoppers</div>
-          <h3>Geyvak (AI companion)</h3>
-          <p class="division-tagline">Decide well. Save money. No upsell.</p>
-          <p>A shopping companion you can chat with. Compare two products, find better value, or talk through a buying decision. Streams replies in seconds. Works on phone or desktop.</p>
-          <ul class="division-features">
-            <li>Side-by-side product comparisons</li>
-            <li>Honest verdicts with the trade-off named</li>
-            <li>Free to use during beta</li>
-            <li>Installable as an app on your phone</li>
+        <article class="service-card">
+          <span class="service-status">Available</span>
+          <div class="service-name serif">Service &middot; clothing and styling</div>
+          <h3>Custom Clothing</h3>
+          <p class="service-tagline">Clothing shaped around comfort, identity, and care.</p>
+          <p>Thoughtful custom clothing support for people who want outfits that feel personal, expressive, and respectfully made.</p>
+          <ul class="service-features">
+            <li>Outfit ideas and styling direction</li>
+            <li>Measurements and fit planning</li>
+            <li>Fabric and design preparation</li>
+            <li>Cultural-modern clothing concepts</li>
           </ul>
-          <a href="https://reva-kappa-one.vercel.app/" class="division-link" target="_blank" rel="noopener">
-            Try it now
+          <a href="#contact" class="service-link">
+            Discuss custom clothing
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </article>
-        <article class="division">
-          <span class="division-status status-live">Live</span>
-          <div class="division-name serif">Pilot &middot; reuse and exchange</div>
-          <h3>QueerBazar</h3>
-          <p class="division-tagline">Reuse-first. Travel-light. Respectful exchange.</p>
-          <p>A pilot market for meaningful items released with care. Respectful money offers, useful travel-light exchanges, vouchers, and mixed offers are welcome.</p>
-          <ul class="division-features">
-            <li>Respectful money offers</li>
-            <li>Useful travel-light exchanges</li>
-            <li>Store, supermarket, travel, or stay vouchers</li>
-            <li>Reva confirms final acceptance</li>
+
+        <article class="service-card">
+          <span class="service-status">Available</span>
+          <div class="service-name serif">Service &middot; guided learning</div>
+          <h3>Online Coaching</h3>
+          <p class="service-tagline">Step-by-step support for learning and confidence.</p>
+          <p>Supportive online coaching for learners who want guidance in communication, digital skills, practical learning, and personal growth.</p>
+          <ul class="service-features">
+            <li>Digital skills and online confidence</li>
+            <li>Communication and learning support</li>
+            <li>Step-by-step topic guidance</li>
+            <li>Calm, self-paced coaching</li>
           </ul>
-          <a href="/queerbazar/" class="division-link">
-            Explore QueerBazar
+          <a href="#contact" class="service-link">
+            Ask about coaching
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-        </article>
-        <article class="division">
-          <span class="division-status status-soon">In development</span>
-          <div class="division-name serif">Product &middot; for everyone</div>
-          <h3>Unnahana</h3>
-          <p class="division-tagline">Wear what you imagine.</p>
-          <p>A custom-tailoring platform. Pick your fabric, design your style, send your measurements &mdash; and get it delivered. Any look, any budget, no middlemen.</p>
-          <ul class="division-features">
-            <li>Choose your own fabric</li>
-            <li>Ethnic, western, or original designs</li>
-            <li>Custom-fitted to your measurements</li>
-            <li>Doorstep delivery worldwide</li>
-          </ul>
-          <span class="division-link muted">Launching soon</span>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- WHY — short distilled principles -->
   <section class="section why-bg" id="why">
     <div class="container">
-      <span class="section-eyebrow">Why us</span>
-      <h2 class="section-title">Three rules, <em>across everything we do.</em></h2>
+      <span class="section-eyebrow">Why Geyvak</span>
+      <h2 class="section-title">Clear help, <em>without pressure.</em></h2>
 
       <div class="why-grid">
         <div class="why-item">
           <h4>Clarity over confusion</h4>
-          <p>You should leave any conversation with us clearer, not more confused. We explain in plain language, without jargon, and we answer the question you actually asked.</p>
+          <p>You should leave any conversation with us clearer, not more confused. We explain things in plain language and keep the next step practical.</p>
         </div>
         <div class="why-item">
-          <h4>Value over pressure</h4>
-          <p>We don&rsquo;t push, upsell, or invent urgency. If the cheaper option is genuinely better for what you need, we&rsquo;ll say so &mdash; even when it costs us the sale.</p>
+          <h4>Care over pressure</h4>
+          <p>We do not rush, push, or overpromise. If a simpler or lower-cost option fits your need better, we will say so clearly.</p>
         </div>
         <div class="why-item">
-          <h4>You before conversion</h4>
-          <p>You&rsquo;re not a click or a lead. Your time, money, and attention deserve respect. That&rsquo;s the standard everything else gets built around.</p>
+          <h4>People before profit</h4>
+          <p>Your time, money, attention, and dignity matter. Every service should feel respectful, useful, and honest.</p>
         </div>
       </div>
 
       <a href="#principles" class="why-link">
-        Read the full ten principles
+        Read our principles
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
   </section>
 
-  <!-- PRINCIPLES — full set, kept for those who care to read -->
   <section class="section principles" id="principles">
     <div class="container">
-      <span class="section-eyebrow">The full set</span>
-      <h2 class="section-title">Ten principles, <em>every decision.</em></h2>
-      <p class="section-intro">These are the filter every Geyvak decision passes through &mdash; from the smallest button on a screen to the biggest engagement with a client.</p>
+      <span class="section-eyebrow">Our principles</span>
+      <h2 class="section-title">Built with <em>care.</em></h2>
+      <p class="section-intro">These principles guide how Geyvak speaks, serves, and makes decisions across IT services, custom clothing, and online coaching.</p>
 
       <div class="principles-grid">
-        <div class="principle"><div class="principle-num">01</div><div><h4>Clarity over confusion</h4><p>We don&rsquo;t profit from making people feel lost, rushed, or overwhelmed.</p></div></div>
-        <div class="principle"><div class="principle-num">02</div><div><h4>Value over pressure</h4><p>We help people choose what fits their life &mdash; not what creates the fastest sale.</p></div></div>
-        <div class="principle"><div class="principle-num">03</div><div><h4>People before conversion</h4><p>You&rsquo;re not a click, lead, or transaction. Your time, money, and attention deserve respect.</p></div></div>
-        <div class="principle"><div class="principle-num">04</div><div><h4>Honest guidance</h4><p>We explain why something is recommended &mdash; openly, with reasoning you can check.</p></div></div>
-        <div class="principle"><div class="principle-num">05</div><div><h4>Budget dignity</h4><p>Being budget-conscious isn&rsquo;t weakness. We support smart choices without judgment.</p></div></div>
-        <div class="principle"><div class="principle-num">06</div><div><h4>Independence and trust</h4><p>User trust comes before affiliate income, partnerships, or commercial pressure.</p></div></div>
-        <div class="principle"><div class="principle-num">07</div><div><h4>Useful technology</h4><p>Tech should make life easier &mdash; not more manipulative, addictive, or confusing.</p></div></div>
-        <div class="principle"><div class="principle-num">08</div><div><h4>Calm decision-making</h4><p>You should leave Geyvak feeling clearer, lighter, and more confident &mdash; not pressured.</p></div></div>
-        <div class="principle"><div class="principle-num">09</div><div><h4>No dark patterns</h4><p>No fake urgency, misleading discounts, hidden bias, or fear-based selling. Ever.</p></div></div>
-        <div class="principle"><div class="principle-num">10</div><div><h4>Care in commerce</h4><p>Money, homes, families, peace of mind &mdash; commerce touches all of these. We treat that with care.</p></div></div>
+        <div class="principle"><div class="principle-num">01</div><div><h4>Clarity over confusion</h4><p>We explain clearly and avoid making people feel lost, rushed, or overwhelmed.</p></div></div>
+        <div class="principle"><div class="principle-num">02</div><div><h4>Care over pressure</h4><p>We support useful decisions without pushing people toward what they do not need.</p></div></div>
+        <div class="principle"><div class="principle-num">03</div><div><h4>People before profit</h4><p>Every person we serve deserves respect before any transaction.</p></div></div>
+        <div class="principle"><div class="principle-num">04</div><div><h4>Practical help first</h4><p>We focus on real next steps, not big promises without a clear path.</p></div></div>
+        <div class="principle"><div class="principle-num">05</div><div><h4>Honest guidance</h4><p>We say what we can do, what we cannot promise, and what may need specialist help.</p></div></div>
+        <div class="principle"><div class="principle-num">06</div><div><h4>Respect in every service</h4><p>Technology, clothing, and learning are personal. We handle them with care.</p></div></div>
       </div>
 
       <div class="essence">
         <div class="essence-label">In one line</div>
-        <p>Geyvak stands for <em>clear, honest, human-centered decisions</em> &mdash; protecting people from pressure, confusion, and poor-value choices.</p>
+        <p>Geyvak stands for <em>clear, practical, human-centered service</em> &mdash; helping people feel more capable, confident, and respected.</p>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container">
-      <h2>Got something we can <em>actually help with?</em></h2>
-      <p>Whether it&rsquo;s an IT problem, a custom outfit idea, or a question about the chat &mdash; reach out. No pressure, no funnels.</p>
+      <h2>Start with a <em>simple message.</em></h2>
+      <p>Tell us what you need help with. Whether it is IT support, custom clothing, or online coaching, Geyvak will guide you clearly from the first step.</p>
       <div class="contact-options">
         <a href="mailto:hello@geyvak.com" class="btn btn-primary">
           hello@geyvak.com
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="https://reva-kappa-one.vercel.app/" class="btn btn-ghost" target="_blank" rel="noopener">Try Geyvak chat</a>
+        <a href="#services" class="btn btn-ghost">View services</a>
       </div>
     </div>
   </section>
@@ -394,14 +366,14 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
           </span>
           <span>Geyvak</span>
         </a>
-        <p>A small company that does three things well &mdash; IT for businesses, custom-tailored clothing, and an AI shopping companion. Built on clarity, honesty, and respect.</p>
+        <p>Practical services built with care. IT services, custom clothing, and online coaching with clarity, patience, and respect.</p>
       </div>
       <div class="footer-col">
-        <h5>What we do</h5>
+        <h5>Services</h5>
         <ul>
-          <li><a href="#divisions">Safe Cyber Connection</a></li>
-          <li><a href="https://reva-kappa-one.vercel.app/" target="_blank" rel="noopener">Geyvak chat</a></li>
-          <li><a href="#divisions">Unnahana</a></li>
+          <li><a href="#services">IT Services</a></li>
+          <li><a href="#services">Custom Clothing</a></li>
+          <li><a href="#services">Online Coaching</a></li>
         </ul>
       </div>
       <div class="footer-col">
