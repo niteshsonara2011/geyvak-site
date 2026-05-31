@@ -3,58 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Geyvak.com provides practical IT services, custom clothing concepts, and online coaching with clarity, care, and respect." />
   <meta name="theme-color" content="#0F3B22" />
-  <title>Geyvak.com — Under Maintenance</title>
+  <title>Geyvak.com — Choose Your Language</title>
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="96x96" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
+      --ink: #102016;
+      --ink-soft: #243a2d;
+      --muted: #627168;
+      --bg: #fffaf2;
+      --cream: #f4eadc;
+      --line: #e7dccb;
       --green: #0f3b22;
       --gold: #b08a36;
-      --cream: #fffaf2;
-      --soft: #f4eadc;
-      --ink: #102016;
-      --muted: #627168;
-      --line: #e7dccb;
+      --gold-soft: #e8d6a9;
+      --white: #ffffff;
+      --shadow: 0 22px 70px -35px rgba(15, 59, 34, 0.55);
     }
 
     * { box-sizing: border-box; }
 
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 28px;
-      color: var(--ink);
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--ink);
       background:
-        radial-gradient(circle at 80% 10%, rgba(176, 138, 54, 0.18), transparent 34%),
-        radial-gradient(circle at 18% 88%, rgba(15, 59, 34, 0.12), transparent 32%),
-        var(--cream);
+        radial-gradient(circle at 84% 0, rgba(176, 138, 54, 0.13), transparent 34%),
+        radial-gradient(circle at 10% 92%, rgba(15, 59, 34, 0.09), transparent 36%),
+        var(--bg);
+      -webkit-font-smoothing: antialiased;
     }
 
-    main {
-      width: min(100%, 780px);
+    body.lang-gu { font-family: "Noto Sans Gujarati", Inter, system-ui, sans-serif; }
+    body.lang-gu .serif,
+    body.lang-gu h1,
+    body.lang-gu h2,
+    body.lang-gu h3 { font-family: "Noto Sans Gujarati", Fraunces, Georgia, serif; }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(100% - 52px, 1120px);
+      margin: 0 auto;
+    }
+
+    .serif, h1, h2, h3 {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+    }
+
+    .language-gate {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(176, 138, 54, 0.22), transparent 34%),
+        radial-gradient(circle at 12% 84%, rgba(15, 59, 34, 0.16), transparent 35%),
+        var(--bg);
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .language-gate.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .gate-card {
+      width: min(100%, 860px);
       text-align: center;
       border: 1px solid var(--line);
       border-radius: 36px;
-      padding: clamp(34px, 6vw, 72px);
-      background: rgba(255, 250, 242, 0.88);
-      box-shadow: 0 28px 80px -45px rgba(15, 59, 34, 0.55);
+      padding: clamp(30px, 6vw, 70px);
+      background: rgba(255, 250, 242, 0.92);
+      box-shadow: var(--shadow);
     }
 
-    .mark {
-      width: 92px;
-      height: 92px;
-      margin: 0 auto 24px;
+    .gate-logo,
+    .brand-mark {
       display: block;
+      flex: 0 0 auto;
     }
 
+    .gate-logo {
+      width: 98px;
+      height: 98px;
+      margin: 0 auto 22px;
+    }
+
+    .gate-eyebrow,
     .eyebrow {
-      margin: 0 0 14px;
       color: var(--gold);
       font-size: 12px;
       font-weight: 800;
@@ -62,79 +113,1098 @@
       text-transform: uppercase;
     }
 
-    h1 {
-      margin: 0;
+    .gate-card h1 {
+      margin: 10px 0 16px;
+      color: var(--green);
+      font-size: clamp(2.1rem, 6vw, 4.4rem);
+      line-height: 1.04;
+    }
+
+    .gate-card p {
+      max-width: 620px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.16rem);
+    }
+
+    .language-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .language-card {
+      min-height: 150px;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 22px;
+      background: var(--white);
+      color: var(--green);
+      cursor: pointer;
+      text-align: left;
+      box-shadow: 0 18px 45px -34px rgba(15, 59, 34, 0.48);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .language-card:hover,
+    .language-card:focus-visible {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: 0 22px 48px -30px rgba(15, 59, 34, 0.58);
+      outline: none;
+    }
+
+    .language-card strong {
+      display: block;
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      line-height: 1.1;
+    }
+
+    .language-card span {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 12px;
+      background: var(--green);
+      color: var(--bg);
+      padding: 10px 14px;
+      border-radius: 999px;
+      z-index: 1001;
+    }
+
+    .skip-link:focus { left: 12px; }
+
+    .site-shell {
+      opacity: 0;
+      transition: opacity 0.28s ease;
+    }
+
+    .site-shell.ready { opacity: 1; }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 250, 242, 0.9);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
       color: var(--green);
       font-family: Fraunces, Georgia, serif;
-      font-size: clamp(2.4rem, 7vw, 4.8rem);
-      font-weight: 400;
-      letter-spacing: -0.04em;
-      line-height: 1.02;
+      font-size: 24px;
     }
 
-    p {
-      margin: 22px auto 0;
-      max-width: 590px;
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: var(--ink-soft);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .language-switcher {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px;
+      background: rgba(255, 255, 255, 0.52);
+    }
+
+    .language-switcher button {
+      border: 0;
+      border-radius: 999px;
+      padding: 8px 10px;
+      background: transparent;
       color: var(--muted);
-      font-size: clamp(1rem, 2vw, 1.18rem);
-      line-height: 1.75;
+      cursor: pointer;
+      font-weight: 800;
     }
 
-    .notice {
+    .language-switcher button.active {
+      background: var(--green);
+      color: var(--bg);
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--green);
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 0 26px 22px;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg);
+    }
+
+    .mobile-menu.open { display: block; }
+
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      font-weight: 800;
+    }
+
+    .hero {
+      padding: 86px 0 76px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.04fr 0.96fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(2.35rem, 5.5vw, 4.7rem);
+      line-height: 1.05;
+    }
+
+    h1 em,
+    h2 em { color: var(--green); font-style: italic; }
+
+    .lead {
+      max-width: 700px;
+      margin: 24px 0 32px;
+      color: var(--ink-soft);
+      font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      margin-top: 32px;
-      padding: 12px 18px;
+      min-height: 48px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: var(--soft);
+      padding: 13px 21px;
+      font-weight: 800;
+    }
+
+    .primary {
+      border-color: var(--green);
+      background: var(--green);
+      color: var(--bg);
+    }
+
+    .ghost {
+      background: rgba(255, 255, 255, 0.45);
       color: var(--green);
-      font-size: 14px;
+    }
+
+    .logo-card {
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      padding: 30px;
+      background: linear-gradient(145deg, #fff, rgba(244, 234, 220, 0.68));
+      box-shadow: var(--shadow);
+    }
+
+    .main-logo {
+      display: block;
+      width: min(100%, 390px);
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .logo-note {
+      margin-top: 14px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
       font-weight: 700;
     }
 
-    .dot {
-      width: 8px;
-      height: 8px;
+    .section {
+      padding: 82px 0;
+    }
+
+    .soft {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), var(--cream));
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      color: var(--ink);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.09;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 0 0 40px;
+      color: var(--ink-soft);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 28px;
+      background: var(--white);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-size: 1.45rem;
+    }
+
+    .card p,
+    .card li {
+      color: #314437;
+      font-size: 14.5px;
+    }
+
+    .tag {
+      margin: 0 0 14px;
+      color: #6b7a52;
+      font-family: Fraunces, Georgia, serif;
+      font-style: italic;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      border-radius: 999px;
+      padding: 5px 11px;
+      background: rgba(15, 59, 34, 0.09);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .status::before {
+      content: "";
+      width: 6px;
+      height: 6px;
       border-radius: 999px;
       background: var(--gold);
     }
 
+    .features {
+      display: grid;
+      gap: 8px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .features li {
+      display: flex;
+      gap: 9px;
+    }
+
+    .features li::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 4px;
+      height: 4px;
+      margin-top: 10px;
+      border-radius: 999px;
+      background: var(--green);
+    }
+
+    .principles {
+      background: var(--green);
+      color: var(--bg);
+    }
+
+    .principles .eyebrow { color: var(--gold-soft); }
+    .principles h2 { color: var(--bg); }
+    .principles .intro,
+    .principles .card p { color: rgba(255, 250, 242, 0.8); }
+
+    .principles .card {
+      border-color: rgba(255, 250, 242, 0.14);
+      background: rgba(255, 250, 242, 0.06);
+    }
+
+    .principles .card h3 { color: var(--gold-soft); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .contact-panel {
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 28px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-panel p {
+      margin: 0 0 14px;
+      color: var(--ink-soft);
+    }
+
+    .contact-link {
+      display: inline-flex;
+      margin-top: 10px;
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 26px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    label {
+      color: #314437;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      margin-top: 6px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      background: var(--white);
+      color: var(--ink);
+      font: inherit;
+      font-size: 15px;
+    }
+
+    textarea { min-height: 126px; resize: vertical; }
+
+    .consent {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-weight: 500;
+    }
+
+    .consent input {
+      width: auto;
+      margin-top: 5px;
+    }
+
     footer {
-      margin-top: 34px;
+      border-top: 1px solid var(--line);
+      padding: 46px 0 28px;
+      background: var(--cream);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 32px;
+    }
+
+    footer h4 {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    footer ul {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .small {
       color: var(--muted);
       font-size: 13px;
+    }
+
+    .bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 32px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    [data-i18n], [data-i18n-placeholder], [data-i18n-aria] { transition: opacity 0.18s ease; }
+
+    @media (max-width: 920px) {
+      .links { display: none; }
+      .menu-btn { display: block; }
+      .hero-grid,
+      .cards,
+      .contact-grid,
+      .footer-grid { grid-template-columns: 1fr; }
+      .logo-card { max-width: 460px; }
+      .language-options { grid-template-columns: 1fr; }
+      .language-card { min-height: auto; text-align: center; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 36px, 1120px); }
+      body { font-size: 16px; }
+      .hero { padding: 60px 0; }
+      .language-switcher { gap: 4px; }
+      .language-switcher button { padding: 7px 8px; font-size: 12px; }
+      .brand span { font-size: 21px; }
+      .main-logo { width: min(100%, 310px); }
     }
   </style>
 </head>
 <body>
-  <main aria-labelledby="maintenance-title">
-    <svg class="mark" viewBox="0 0 120 120" role="img" aria-label="Geyvak icon">
-      <path d="M72 17c16 18 9 33-3 44 13-7 30-5 42 5-20 2-32 8-40 21l-9 15H47c-25 0-43-18-43-42s18-42 43-42c18 0 32 9 38 23H68c-5-7-12-10-21-10-16 0-28 12-28 29s12 29 28 29h21l7-12c-7-8-12-20-3-60z" fill="#0f3b22"/>
-      <path d="M21 54h23m-18-12h28m-20-12h24" stroke="#b08a36" stroke-width="4" stroke-linecap="round"/>
-      <circle cx="48" cy="54" r="4" fill="#b08a36"/>
-      <circle cx="58" cy="42" r="4" fill="#b08a36"/>
-      <circle cx="64" cy="30" r="4" fill="#b08a36"/>
-      <path d="M58 101c-4 13-13 16-24 20m24-20c0 15 0 21-8 29m8-29c8 15 12 20 26 26" stroke="#b08a36" stroke-width="2" stroke-linecap="round" fill="none"/>
-    </svg>
+  <a class="skip-link" href="#main" data-i18n="skipLink">Skip to main content</a>
 
-    <p class="eyebrow">Temporary notice</p>
-    <h1 id="maintenance-title">Geyvak is under maintenance.</h1>
-    <p>
-      We are polishing the website and making it clearer, calmer, and more useful.
-      Please visit again soon.
-    </p>
-
-    <div class="notice" aria-label="Maintenance status">
-      <span class="dot" aria-hidden="true"></span>
-      Website temporarily unavailable while we improve it
+  <section class="language-gate" id="languageGate" aria-labelledby="gateTitle">
+    <div class="gate-card">
+      <svg class="gate-logo" viewBox="0 0 120 120" role="img" aria-label="Geyvak icon">
+        <path d="M72 17c16 18 9 33-3 44 13-7 30-5 42 5-20 2-32 8-40 21l-9 15H47c-25 0-43-18-43-42s18-42 43-42c18 0 32 9 38 23H68c-5-7-12-10-21-10-16 0-28 12-28 29s12 29 28 29h21l7-12c-7-8-12-20-3-60z" fill="#0f3b22"/>
+        <path d="M21 54h23m-18-12h28m-20-12h24" stroke="#b08a36" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="48" cy="54" r="4" fill="#b08a36"/>
+        <circle cx="58" cy="42" r="4" fill="#b08a36"/>
+        <circle cx="64" cy="30" r="4" fill="#b08a36"/>
+        <path d="M58 101c-4 13-13 16-24 20m24-20c0 15 0 21-8 29m8-29c8 15 12 20 26 26" stroke="#b08a36" stroke-width="2" stroke-linecap="round" fill="none"/>
+      </svg>
+      <div class="gate-eyebrow">Geyvak.com</div>
+      <h1 id="gateTitle">Choose your language</h1>
+      <p>Before you explore Geyvak, please select the language that feels most comfortable for you.</p>
+      <div class="language-options" role="list" aria-label="Language options">
+        <button class="language-card" type="button" data-lang-choice="en">
+          <strong>English</strong>
+          <span>Explore Geyvak in clear, practical English.</span>
+        </button>
+        <button class="language-card" type="button" data-lang-choice="gu">
+          <strong>ગુજરાતી</strong>
+          <span>ગેવાકને સરળ અને સન્માનભરી ગુજરાતીમાં જુઓ.</span>
+        </button>
+        <button class="language-card" type="button" data-lang-choice="es">
+          <strong>Español</strong>
+          <span>Explora Geyvak en español claro y cercano.</span>
+        </button>
+      </div>
     </div>
+  </section>
+
+  <div class="site-shell" id="siteShell">
+    <header class="header">
+      <div class="container">
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#main" class="brand" aria-label="Geyvak.com home">
+            <svg class="brand-mark" viewBox="0 0 120 120" role="img" aria-label="Geyvak icon">
+              <path d="M72 17c16 18 9 33-3 44 13-7 30-5 42 5-20 2-32 8-40 21l-9 15H47c-25 0-43-18-43-42s18-42 43-42c18 0 32 9 38 23H68c-5-7-12-10-21-10-16 0-28 12-28 29s12 29 28 29h21l7-12c-7-8-12-20-3-60z" fill="#0f3b22"/>
+              <path d="M21 54h23m-18-12h28m-20-12h24" stroke="#b08a36" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="48" cy="54" r="4" fill="#b08a36"/>
+              <circle cx="58" cy="42" r="4" fill="#b08a36"/>
+              <circle cx="64" cy="30" r="4" fill="#b08a36"/>
+              <path d="M58 101c-4 13-13 16-24 20m24-20c0 15 0 21-8 29m8-29c8 15 12 20 26 26" stroke="#b08a36" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+            <span>Geyvak.com</span>
+          </a>
+
+          <ul class="links">
+            <li><a href="#services" data-i18n="navServices">Services</a></li>
+            <li><a href="#how" data-i18n="navHow">How it works</a></li>
+            <li><a href="#values" data-i18n="navValues">Values</a></li>
+            <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+          </ul>
+
+          <div class="language-switcher" aria-label="Change language">
+            <button type="button" data-lang-switch="en">EN</button>
+            <button type="button" data-lang-switch="gu">ગુ</button>
+            <button type="button" data-lang-switch="es">ES</button>
+          </div>
+
+          <button class="menu-btn" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+            <svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <path d="M4 7h16M4 12h16M4 17h16"/>
+            </svg>
+          </button>
+        </nav>
+      </div>
+      <div class="mobile-menu" id="mobileMenu" hidden>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#how" data-i18n="navHow">How it works</a>
+        <a href="#values" data-i18n="navValues">Values</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow" data-i18n="heroEyebrow">Practical services built with care</span>
+            <h1 data-i18n="heroTitle">Clear help for technology, clothing, and learning.</h1>
+            <p class="lead" data-i18n="heroLead">Geyvak provides practical IT services, custom clothing concepts, and online coaching with clarity, care, and respect. We help people solve everyday needs without confusion, pressure, or rushed decisions.</p>
+            <div class="actions">
+              <a class="btn primary" href="#services" data-i18n="heroPrimary">View services</a>
+              <a class="btn ghost" href="#contact" data-i18n="heroSecondary">Contact Geyvak</a>
+            </div>
+          </div>
+
+          <div class="logo-card" aria-label="Geyvak logo">
+            <svg class="main-logo" viewBox="0 0 520 560" role="img" aria-label="Geyvak.com logo">
+              <rect width="520" height="560" rx="36" fill="#fffaf2"/>
+              <g transform="translate(92 42)">
+                <path d="M210 0c54 56 37 112-10 151 46-22 101-9 132 27-72 4-120 29-146 80l-29 55H88c-81 0-139-59-139-139S7 35 88 35c58 0 105 30 125 77h-55c-15-21-40-35-70-35-54 0-92 41-92 97s38 97 92 97h69l28-51c-25-28-43-79 25-220z" fill="#0f3b22"/>
+                <path d="M-12 148H66M6 111h92M33 78h88" stroke="#b08a36" stroke-width="8" stroke-linecap="round"/>
+                <circle cx="70" cy="148" r="9" fill="#fffaf2" stroke="#b08a36" stroke-width="6"/>
+                <circle cx="102" cy="111" r="9" fill="#fffaf2" stroke="#b08a36" stroke-width="6"/>
+                <circle cx="125" cy="78" r="9" fill="#fffaf2" stroke="#b08a36" stroke-width="6"/>
+                <circle cx="103" cy="208" r="18" fill="#b08a36"/>
+                <path d="M146 312c-4 34-22 55-63 68m63-68c-10 45-10 77-34 99m34-99c10 46 16 77 44 102m-44-102c33 21 61 33 103 36m-103-36c-35 21-60 29-105 31" stroke="#b08a36" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <path d="M208 30c28 7 50 25 61 51-31 4-57-10-72-38m57 48c27-18 60-18 88-3-24 18-55 22-87 5" fill="#0f3b22"/>
+              </g>
+              <text x="260" y="452" text-anchor="middle" fill="#0f3b22" font-family="Georgia,serif" font-size="72" letter-spacing="5">Geyvak.com</text>
+              <path d="M145 500h110m10 0h10m20 0h110" stroke="#b08a36" stroke-width="3" stroke-linecap="round"/>
+              <path d="M260 483c16 15 16 31 0 46-16-15-16-31 0-46z" fill="#0f3b22"/>
+            </svg>
+            <div class="logo-note" data-i18n="logoNote">Technology with roots. Service with care.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section soft" id="services">
+        <div class="container">
+          <span class="eyebrow" data-i18n="servicesEyebrow">What we offer</span>
+          <h2 data-i18n="servicesTitle">Three services, one careful standard.</h2>
+          <p class="intro" data-i18n="servicesIntro">Each service is practical, human, and clear. We explain what can be done, what cannot be promised, and what the next useful step should be.</p>
+
+          <div class="cards">
+            <article class="card">
+              <span class="status" data-i18n="statusAvailable">Available</span>
+              <h3 data-i18n="itTitle">IT Services</h3>
+              <p class="tag" data-i18n="itTag">Simple technology help without jargon.</p>
+              <p data-i18n="itText">Practical support for devices, setup, software, online accounts, websites, basic cybersecurity, and everyday digital confidence.</p>
+              <ul class="features">
+                <li data-i18n="itFeature1">Device setup and troubleshooting</li>
+                <li data-i18n="itFeature2">Software and account guidance</li>
+                <li data-i18n="itFeature3">Basic cybersecurity support</li>
+                <li data-i18n="itFeature4">Website and digital setup help</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <span class="status" data-i18n="statusAvailable">Available</span>
+              <h3 data-i18n="clothingTitle">Custom Clothing</h3>
+              <p class="tag" data-i18n="clothingTag">Clothing shaped around comfort, identity, and care.</p>
+              <p data-i18n="clothingText">Custom clothing concepts inspired by Indian craft, cultural storytelling, modern personal styling, comfort, and respectful fit planning.</p>
+              <ul class="features">
+                <li data-i18n="clothingFeature1">Outfit ideas and styling direction</li>
+                <li data-i18n="clothingFeature2">Measurements and fit planning</li>
+                <li data-i18n="clothingFeature3">Fabric and design preparation</li>
+                <li data-i18n="clothingFeature4">Cultural-modern clothing concepts</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <span class="status" data-i18n="statusAvailable">Available</span>
+              <h3 data-i18n="coachingTitle">Online Coaching</h3>
+              <p class="tag" data-i18n="coachingTag">Step-by-step support for learning and confidence.</p>
+              <p data-i18n="coachingText">Supportive online coaching for learners who want guidance in communication, digital skills, practical learning, and personal growth.</p>
+              <ul class="features">
+                <li data-i18n="coachingFeature1">Digital skills and confidence</li>
+                <li data-i18n="coachingFeature2">Communication support</li>
+                <li data-i18n="coachingFeature3">Practical learning plans</li>
+                <li data-i18n="coachingFeature4">Friendly online sessions</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how">
+        <div class="container">
+          <span class="eyebrow" data-i18n="howEyebrow">How it works</span>
+          <h2 data-i18n="howTitle">A simple path from confusion to clarity.</h2>
+          <p class="intro" data-i18n="howIntro">Geyvak keeps the process calm and practical, so visitors know what is happening before they make a decision.</p>
+
+          <div class="cards">
+            <article class="card">
+              <h3 data-i18n="step1Title">1. Share the need</h3>
+              <p data-i18n="step1Text">Tell us what you want help with, in your own words. No perfect explanation is required.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="step2Title">2. Receive clear options</h3>
+              <p data-i18n="step2Text">We explain what is possible, what may need more support, and the most useful next step.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="step3Title">3. Move with care</h3>
+              <p data-i18n="step3Text">Work begins only when the purpose, limits, timing, and expectations are clear.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section principles" id="values">
+        <div class="container">
+          <span class="eyebrow" data-i18n="valuesEyebrow">Geyvak values</span>
+          <h2 data-i18n="valuesTitle">Technology carries the work. People carry the care.</h2>
+          <p class="intro" data-i18n="valuesIntro">Geyvak is built around dignity, transparency, practical usefulness, and respect for people from different backgrounds.</p>
+
+          <div class="cards">
+            <article class="card">
+              <h3 data-i18n="value1Title">Clarity</h3>
+              <p data-i18n="value1Text">We keep explanations simple, honest, and useful.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="value2Title">Care</h3>
+              <p data-i18n="value2Text">We work with patience, privacy, and respect.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="value3Title">Practical action</h3>
+              <p data-i18n="value3Text">We focus on steps that can genuinely help in real life.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <span class="eyebrow" data-i18n="contactEyebrow">Contact</span>
+            <h2 data-i18n="contactTitle">Start with one clear message.</h2>
+            <p class="intro" data-i18n="contactIntro">Choose the service area, write what you need, and Geyvak can respond with the most useful next step.</p>
+            <div class="contact-panel">
+              <p data-i18n="contactNote">For now, you can contact Geyvak directly by email while the service forms are being polished.</p>
+              <a class="contact-link" href="mailto:niteshsonara2011@gmail.com">niteshsonara2011@gmail.com</a>
+            </div>
+          </div>
+
+          <form action="mailto:niteshsonara2011@gmail.com" method="post" enctype="text/plain">
+            <label>
+              <span data-i18n="formName">Your name</span>
+              <input name="name" type="text" data-i18n-placeholder="formNamePlaceholder" placeholder="Your name" />
+            </label>
+            <label>
+              <span data-i18n="formEmail">Email</span>
+              <input name="email" type="email" data-i18n-placeholder="formEmailPlaceholder" placeholder="your@email.com" />
+            </label>
+            <label>
+              <span data-i18n="formService">Service area</span>
+              <select name="service">
+                <option data-i18n="formOptionIT">IT Services</option>
+                <option data-i18n="formOptionClothing">Custom Clothing</option>
+                <option data-i18n="formOptionCoaching">Online Coaching</option>
+                <option data-i18n="formOptionOther">Other / Not sure</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="formMessage">Message</span>
+              <textarea name="message" data-i18n-placeholder="formMessagePlaceholder" placeholder="Tell us what you need help with."></textarea>
+            </label>
+            <label class="consent">
+              <input type="checkbox" name="consent" />
+              <span data-i18n="formConsent">I understand this message will be used only to respond to my enquiry.</span>
+            </label>
+            <button class="btn primary" type="submit" data-i18n="formSubmit">Send enquiry</button>
+          </form>
+        </div>
+      </section>
+    </main>
 
     <footer>
-      Geyvak.com · Technology with roots. Service with care.
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>Geyvak.com</h3>
+            <p class="small" data-i18n="footerText">Practical services built with care: IT services, custom clothing concepts, and online coaching.</p>
+          </div>
+          <div>
+            <h4 data-i18n="footerExplore">Explore</h4>
+            <ul>
+              <li><a href="#services" data-i18n="navServices">Services</a></li>
+              <li><a href="#how" data-i18n="navHow">How it works</a></li>
+              <li><a href="#values" data-i18n="navValues">Values</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 data-i18n="footerLanguages">Languages</h4>
+            <ul>
+              <li><button type="button" data-lang-switch="en">English</button></li>
+              <li><button type="button" data-lang-switch="gu">ગુજરાતી</button></li>
+              <li><button type="button" data-lang-switch="es">Español</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          <span class="small">© <span id="year"></span> Geyvak.com</span>
+          <span class="small" data-i18n="footerLine">Technology with roots. Service with care.</span>
+        </div>
+      </div>
     </footer>
-  </main>
+  </div>
+
+  <script>
+    const translations = {
+      en: {
+        documentTitle: "Geyvak.com — Practical services built with care",
+        skipLink: "Skip to main content",
+        navServices: "Services",
+        navHow: "How it works",
+        navValues: "Values",
+        navContact: "Contact",
+        heroEyebrow: "Practical services built with care",
+        heroTitle: "Clear help for technology, clothing, and learning.",
+        heroLead: "Geyvak provides practical IT services, custom clothing concepts, and online coaching with clarity, care, and respect. We help people solve everyday needs without confusion, pressure, or rushed decisions.",
+        heroPrimary: "View services",
+        heroSecondary: "Contact Geyvak",
+        logoNote: "Technology with roots. Service with care.",
+        servicesEyebrow: "What we offer",
+        servicesTitle: "Three services, one careful standard.",
+        servicesIntro: "Each service is practical, human, and clear. We explain what can be done, what cannot be promised, and what the next useful step should be.",
+        statusAvailable: "Available",
+        itTitle: "IT Services",
+        itTag: "Simple technology help without jargon.",
+        itText: "Practical support for devices, setup, software, online accounts, websites, basic cybersecurity, and everyday digital confidence.",
+        itFeature1: "Device setup and troubleshooting",
+        itFeature2: "Software and account guidance",
+        itFeature3: "Basic cybersecurity support",
+        itFeature4: "Website and digital setup help",
+        clothingTitle: "Custom Clothing",
+        clothingTag: "Clothing shaped around comfort, identity, and care.",
+        clothingText: "Custom clothing concepts inspired by Indian craft, cultural storytelling, modern personal styling, comfort, and respectful fit planning.",
+        clothingFeature1: "Outfit ideas and styling direction",
+        clothingFeature2: "Measurements and fit planning",
+        clothingFeature3: "Fabric and design preparation",
+        clothingFeature4: "Cultural-modern clothing concepts",
+        coachingTitle: "Online Coaching",
+        coachingTag: "Step-by-step support for learning and confidence.",
+        coachingText: "Supportive online coaching for learners who want guidance in communication, digital skills, practical learning, and personal growth.",
+        coachingFeature1: "Digital skills and confidence",
+        coachingFeature2: "Communication support",
+        coachingFeature3: "Practical learning plans",
+        coachingFeature4: "Friendly online sessions",
+        howEyebrow: "How it works",
+        howTitle: "A simple path from confusion to clarity.",
+        howIntro: "Geyvak keeps the process calm and practical, so visitors know what is happening before they make a decision.",
+        step1Title: "1. Share the need",
+        step1Text: "Tell us what you want help with, in your own words. No perfect explanation is required.",
+        step2Title: "2. Receive clear options",
+        step2Text: "We explain what is possible, what may need more support, and the most useful next step.",
+        step3Title: "3. Move with care",
+        step3Text: "Work begins only when the purpose, limits, timing, and expectations are clear.",
+        valuesEyebrow: "Geyvak values",
+        valuesTitle: "Technology carries the work. People carry the care.",
+        valuesIntro: "Geyvak is built around dignity, transparency, practical usefulness, and respect for people from different backgrounds.",
+        value1Title: "Clarity",
+        value1Text: "We keep explanations simple, honest, and useful.",
+        value2Title: "Care",
+        value2Text: "We work with patience, privacy, and respect.",
+        value3Title: "Practical action",
+        value3Text: "We focus on steps that can genuinely help in real life.",
+        contactEyebrow: "Contact",
+        contactTitle: "Start with one clear message.",
+        contactIntro: "Choose the service area, write what you need, and Geyvak can respond with the most useful next step.",
+        contactNote: "For now, you can contact Geyvak directly by email while the service forms are being polished.",
+        formName: "Your name",
+        formNamePlaceholder: "Your name",
+        formEmail: "Email",
+        formEmailPlaceholder: "your@email.com",
+        formService: "Service area",
+        formOptionIT: "IT Services",
+        formOptionClothing: "Custom Clothing",
+        formOptionCoaching: "Online Coaching",
+        formOptionOther: "Other / Not sure",
+        formMessage: "Message",
+        formMessagePlaceholder: "Tell us what you need help with.",
+        formConsent: "I understand this message will be used only to respond to my enquiry.",
+        formSubmit: "Send enquiry",
+        footerText: "Practical services built with care: IT services, custom clothing concepts, and online coaching.",
+        footerExplore: "Explore",
+        footerLanguages: "Languages",
+        footerLine: "Technology with roots. Service with care."
+      },
+      gu: {
+        documentTitle: "Geyvak.com — કાળજી સાથે બનેલી વ્યવહારુ સેવાઓ",
+        skipLink: "મુખ્ય સામગ્રી પર જાઓ",
+        navServices: "સેવાઓ",
+        navHow: "કેવી રીતે કાર્ય કરે છે",
+        navValues: "મૂલ્યો",
+        navContact: "સંપર્ક",
+        heroEyebrow: "કાળજી સાથે બનેલી વ્યવહારુ સેવાઓ",
+        heroTitle: "ટેકનોલોજી, કપડાં અને શિક્ષણ માટે સ્પષ્ટ મદદ.",
+        heroLead: "ગેવાક સ્પષ્ટતા, કાળજી અને સન્માન સાથે વ્યવહારુ IT સેવાઓ, કસ્ટમ કપડાંના વિચાર અને ઓનલાઇન કોચિંગ આપે છે. અમે લોકોને ગૂંચવણ, દબાણ અથવા ઉતાવળ વગર રોજિંદી જરૂરિયાતો ઉકેલવામાં મદદ કરીએ છીએ.",
+        heroPrimary: "સેવાઓ જુઓ",
+        heroSecondary: "ગેવાકનો સંપર્ક કરો",
+        logoNote: "મૂળ સાથે ટેકનોલોજી. કાળજી સાથે સેવા.",
+        servicesEyebrow: "અમે શું આપીએ છીએ",
+        servicesTitle: "ત્રણ સેવાઓ, એક જ કાળજીભર્યો ધોરણ.",
+        servicesIntro: "દરેક સેવા વ્યવહારુ, માનવીય અને સ્પષ્ટ છે. શું થઈ શકે, શું વચન આપી શકાતું નથી અને આગળનું ઉપયોગી પગલું શું છે તે અમે સરળ રીતે સમજાવીએ છીએ.",
+        statusAvailable: "ઉપલબ્ધ",
+        itTitle: "IT સેવાઓ",
+        itTag: "જટિલ ભાષા વગર સરળ ટેકનોલોજી મદદ.",
+        itText: "ડિવાઇસ, સેટઅપ, સોફ્ટવેર, ઓનલાઇન એકાઉન્ટ, વેબસાઇટ, મૂળભૂત સાયબર સુરક્ષા અને રોજિંદા ડિજિટલ આત્મવિશ્વાસ માટે વ્યવહારુ સહાય.",
+        itFeature1: "ડિવાઇસ સેટઅપ અને સમસ્યા ઉકેલ",
+        itFeature2: "સોફ્ટવેર અને એકાઉન્ટ માર્ગદર્શન",
+        itFeature3: "મૂળભૂત સાયબર સુરક્ષા સહાય",
+        itFeature4: "વેબસાઇટ અને ડિજિટલ સેટઅપ મદદ",
+        clothingTitle: "કસ્ટમ કપડાં",
+        clothingTag: "આરામ, ઓળખ અને કાળજી અનુસાર કપડાં.",
+        clothingText: "ભારતીય કળા, સાંસ્કૃતિક વાર્તા, આધુનિક વ્યક્તિગત સ્ટાઇલ, આરામ અને સન્માનભર્યા ફિટ પ્લાનિંગથી પ્રેરિત કસ્ટમ કપડાંના વિચાર.",
+        clothingFeature1: "આઉટફિટ વિચાર અને સ્ટાઇલ દિશા",
+        clothingFeature2: "માપ અને ફિટ પ્લાનિંગ",
+        clothingFeature3: "ફેબ્રિક અને ડિઝાઇન તૈયારી",
+        clothingFeature4: "સાંસ્કૃતિક-આધુનિક કપડાંના વિચાર",
+        coachingTitle: "ઓનલાઇન કોચિંગ",
+        coachingTag: "શિક્ષણ અને આત્મવિશ્વાસ માટે પગલુંદર સહાય.",
+        coachingText: "જે શીખનારાઓ કમ્યુનિકેશન, ડિજિટલ સ્કિલ્સ, વ્યવહારુ શિક્ષણ અને વ્યક્તિગત વૃદ્ધિમાં માર્ગદર્શન ઇચ્છે છે તેમના માટે સહાયક ઓનલાઇન કોચિંગ.",
+        coachingFeature1: "ડિજિટલ સ્કિલ્સ અને આત્મવિશ્વાસ",
+        coachingFeature2: "કમ્યુનિકેશન સહાય",
+        coachingFeature3: "વ્યવહારુ શીખવાની યોજના",
+        coachingFeature4: "મૈત્રીપૂર્ણ ઓનલાઇન સત્રો",
+        howEyebrow: "કેવી રીતે કાર્ય કરે છે",
+        howTitle: "ગૂંચવણથી સ્પષ્ટતા તરફ સરળ માર્ગ.",
+        howIntro: "ગેવાક પ્રક્રિયાને શાંત અને વ્યવહારુ રાખે છે, જેથી મુલાકાતીઓને નિર્ણય લેતા પહેલાં શું થઈ રહ્યું છે તે સ્પષ્ટ સમજાય.",
+        step1Title: "1. જરૂરિયાત જણાવો",
+        step1Text: "તમને કઈ મદદ જોઈએ છે તે તમારા પોતાના શબ્દોમાં કહો. પરફેક્ટ સમજાવવું જરૂરી નથી.",
+        step2Title: "2. સ્પષ્ટ વિકલ્પ મેળવો",
+        step2Text: "શું શક્ય છે, ક્યાં વધુ સહાય જોઈએ અને આગળનું સૌથી ઉપયોગી પગલું શું છે તે અમે સમજાવીએ છીએ.",
+        step3Title: "3. કાળજીથી આગળ વધો",
+        step3Text: "હેતુ, મર્યાદા, સમય અને અપેક્ષા સ્પષ્ટ થયા પછી જ કામ શરૂ થાય છે.",
+        valuesEyebrow: "ગેવાકના મૂલ્યો",
+        valuesTitle: "ટેકનોલોજી કામ વહન કરે છે. કાળજી લોકો વહન કરે છે.",
+        valuesIntro: "ગેવાક ગૌરવ, પારદર્શિતા, વ્યવહારુ ઉપયોગિતા અને જુદા જુદા પૃષ્ઠભૂમિના લોકો પ્રત્યે સન્માન પર બનેલું છે.",
+        value1Title: "સ્પષ્ટતા",
+        value1Text: "અમે સમજણ સરળ, સત્યનિષ્ઠ અને ઉપયોગી રાખીએ છીએ.",
+        value2Title: "કાળજી",
+        value2Text: "અમે ધીરજ, ગોપનીયતા અને સન્માન સાથે કામ કરીએ છીએ.",
+        value3Title: "વ્યવહારુ પગલું",
+        value3Text: "અમે એવા પગલાં પર ધ્યાન આપીએ છીએ જે વાસ્તવિક જીવનમાં સાચી મદદ કરે.",
+        contactEyebrow: "સંપર્ક",
+        contactTitle: "એક સ્પષ્ટ સંદેશથી શરૂઆત કરો.",
+        contactIntro: "સેવા ક્ષેત્ર પસંદ કરો, તમારી જરૂરિયાત લખો અને ગેવાક આગળનું ઉપયોગી પગલું જણાવશે.",
+        contactNote: "હાલ માટે, સર્વિસ ફોર્મ વધુ સારા બનતા હોય ત્યાં સુધી તમે ગેવાકનો સીધો ઈમેઈલ દ્વારા સંપર્ક કરી શકો છો.",
+        formName: "તમારું નામ",
+        formNamePlaceholder: "તમારું નામ",
+        formEmail: "ઈમેઈલ",
+        formEmailPlaceholder: "your@email.com",
+        formService: "સેવા ક્ષેત્ર",
+        formOptionIT: "IT સેવાઓ",
+        formOptionClothing: "કસ્ટમ કપડાં",
+        formOptionCoaching: "ઓનલાઇન કોચિંગ",
+        formOptionOther: "અન્ય / ખાતરી નથી",
+        formMessage: "સંદેશ",
+        formMessagePlaceholder: "તમને કઈ મદદ જોઈએ છે તે લખો.",
+        formConsent: "હું સમજું છું કે આ સંદેશનો ઉપયોગ માત્ર મારી પૂછપરછનો જવાબ આપવા માટે થશે.",
+        formSubmit: "પૂછપરછ મોકલો",
+        footerText: "કાળજી સાથે બનેલી વ્યવહારુ સેવાઓ: IT સેવાઓ, કસ્ટમ કપડાંના વિચાર અને ઓનલાઇન કોચિંગ.",
+        footerExplore: "જુઓ",
+        footerLanguages: "ભાષાઓ",
+        footerLine: "મૂળ સાથે ટેકનોલોજી. કાળજી સાથે સેવા."
+      },
+      es: {
+        documentTitle: "Geyvak.com — Servicios prácticos creados con cuidado",
+        skipLink: "Saltar al contenido principal",
+        navServices: "Servicios",
+        navHow: "Cómo funciona",
+        navValues: "Valores",
+        navContact: "Contacto",
+        heroEyebrow: "Servicios prácticos creados con cuidado",
+        heroTitle: "Ayuda clara para tecnología, ropa y aprendizaje.",
+        heroLead: "Geyvak ofrece servicios prácticos de IT, conceptos de ropa personalizada y coaching en línea con claridad, cuidado y respeto. Ayudamos a resolver necesidades cotidianas sin confusión, presión ni decisiones apresuradas.",
+        heroPrimary: "Ver servicios",
+        heroSecondary: "Contactar a Geyvak",
+        logoNote: "Tecnología con raíces. Servicio con cuidado.",
+        servicesEyebrow: "Lo que ofrecemos",
+        servicesTitle: "Tres servicios, un mismo estándar cuidadoso.",
+        servicesIntro: "Cada servicio es práctico, humano y claro. Explicamos qué se puede hacer, qué no se puede prometer y cuál debería ser el siguiente paso útil.",
+        statusAvailable: "Disponible",
+        itTitle: "Servicios de IT",
+        itTag: "Ayuda tecnológica sencilla, sin jerga.",
+        itText: "Soporte práctico para dispositivos, configuración, software, cuentas en línea, sitios web, ciberseguridad básica y confianza digital diaria.",
+        itFeature1: "Configuración y solución de problemas",
+        itFeature2: "Guía para software y cuentas",
+        itFeature3: "Soporte básico de ciberseguridad",
+        itFeature4: "Ayuda con sitios web y configuración digital",
+        clothingTitle: "Ropa personalizada",
+        clothingTag: "Ropa pensada desde la comodidad, la identidad y el cuidado.",
+        clothingText: "Conceptos de ropa personalizada inspirados en artesanía india, narración cultural, estilo personal moderno, comodidad y planificación respetuosa del ajuste.",
+        clothingFeature1: "Ideas de vestuario y dirección de estilo",
+        clothingFeature2: "Medidas y planificación de ajuste",
+        clothingFeature3: "Preparación de telas y diseño",
+        clothingFeature4: "Conceptos culturales y modernos de ropa",
+        coachingTitle: "Coaching en línea",
+        coachingTag: "Apoyo paso a paso para aprender y ganar confianza.",
+        coachingText: "Coaching en línea de apoyo para personas que quieren orientación en comunicación, habilidades digitales, aprendizaje práctico y crecimiento personal.",
+        coachingFeature1: "Habilidades digitales y confianza",
+        coachingFeature2: "Apoyo en comunicación",
+        coachingFeature3: "Planes de aprendizaje prácticos",
+        coachingFeature4: "Sesiones en línea amables",
+        howEyebrow: "Cómo funciona",
+        howTitle: "Un camino simple de la confusión a la claridad.",
+        howIntro: "Geyvak mantiene el proceso tranquilo y práctico, para que cada visitante entienda lo que ocurre antes de tomar una decisión.",
+        step1Title: "1. Comparte la necesidad",
+        step1Text: "Cuéntanos en tus propias palabras en qué necesitas ayuda. No hace falta explicarlo perfectamente.",
+        step2Title: "2. Recibe opciones claras",
+        step2Text: "Explicamos qué es posible, qué puede necesitar más apoyo y cuál es el siguiente paso más útil.",
+        step3Title: "3. Avanza con cuidado",
+        step3Text: "El trabajo empieza solo cuando el propósito, los límites, los tiempos y las expectativas están claros.",
+        valuesEyebrow: "Valores de Geyvak",
+        valuesTitle: "La tecnología lleva el trabajo. Las personas llevan el cuidado.",
+        valuesIntro: "Geyvak se construye alrededor de la dignidad, la transparencia, la utilidad práctica y el respeto por personas de distintos orígenes.",
+        value1Title: "Claridad",
+        value1Text: "Mantenemos las explicaciones simples, honestas y útiles.",
+        value2Title: "Cuidado",
+        value2Text: "Trabajamos con paciencia, privacidad y respeto.",
+        value3Title: "Acción práctica",
+        value3Text: "Nos enfocamos en pasos que realmente puedan ayudar en la vida diaria.",
+        contactEyebrow: "Contacto",
+        contactTitle: "Empieza con un mensaje claro.",
+        contactIntro: "Elige el área de servicio, escribe lo que necesitas y Geyvak puede responder con el siguiente paso más útil.",
+        contactNote: "Por ahora, puedes contactar directamente a Geyvak por correo mientras se terminan de pulir los formularios del servicio.",
+        formName: "Tu nombre",
+        formNamePlaceholder: "Tu nombre",
+        formEmail: "Correo electrónico",
+        formEmailPlaceholder: "tu@email.com",
+        formService: "Área de servicio",
+        formOptionIT: "Servicios de IT",
+        formOptionClothing: "Ropa personalizada",
+        formOptionCoaching: "Coaching en línea",
+        formOptionOther: "Otro / No estoy seguro",
+        formMessage: "Mensaje",
+        formMessagePlaceholder: "Cuéntanos en qué necesitas ayuda.",
+        formConsent: "Entiendo que este mensaje se usará solo para responder a mi consulta.",
+        formSubmit: "Enviar consulta",
+        footerText: "Servicios prácticos creados con cuidado: IT, ropa personalizada y coaching en línea.",
+        footerExplore: "Explorar",
+        footerLanguages: "Idiomas",
+        footerLine: "Tecnología con raíces. Servicio con cuidado."
+      }
+    };
+
+    const gate = document.getElementById("languageGate");
+    const shell = document.getElementById("siteShell");
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const year = document.getElementById("year");
+
+    year.textContent = new Date().getFullYear();
+
+    function setLanguage(lang, closeGate = true) {
+      const selected = translations[lang] ? lang : "en";
+      const dict = translations[selected];
+
+      document.documentElement.lang = selected === "gu" ? "gu" : selected;
+      document.title = dict.documentTitle;
+      document.body.classList.remove("lang-en", "lang-gu", "lang-es");
+      document.body.classList.add(`lang-${selected}`);
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        if (dict[key]) element.textContent = dict[key];
+      });
+
+      document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+        const key = element.getAttribute("data-i18n-placeholder");
+        if (dict[key]) element.setAttribute("placeholder", dict[key]);
+      });
+
+      document.querySelectorAll("[data-lang-switch]").forEach((button) => {
+        button.classList.toggle("active", button.getAttribute("data-lang-switch") === selected);
+      });
+
+      localStorage.setItem("geyvakLanguage", selected);
+
+      if (closeGate) {
+        gate.classList.add("hidden");
+        gate.setAttribute("aria-hidden", "true");
+      }
+
+      shell.classList.add("ready");
+    }
+
+    document.querySelectorAll("[data-lang-choice]").forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.getAttribute("data-lang-choice"), true));
+    });
+
+    document.querySelectorAll("[data-lang-switch]").forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.getAttribute("data-lang-switch"), true));
+    });
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("open");
+      mobileMenu.hidden = !isOpen;
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        mobileMenu.hidden = true;
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    const savedLanguage = localStorage.getItem("geyvakLanguage");
+    if (savedLanguage && translations[savedLanguage]) {
+      setLanguage(savedLanguage, true);
+    } else {
+      setLanguage("en", false);
+    }
+  </script>
 </body>
 </html>
