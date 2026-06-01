@@ -1,0 +1,1 @@
+$(cat /mnt/data/geyvak-logo-400.png | base64)
