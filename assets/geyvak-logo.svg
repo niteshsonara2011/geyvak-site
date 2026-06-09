@@ -1,24 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-labelledby="title desc">
   <title id="title">Geyvak.com logo</title>
-  <desc id="desc">Dark green Geyvak logo with leaf sprout, gold circuitry, roots, and Geyvak.com wordmark.</desc>
-  <rect width="1200" height="1200" fill="#fffaf2"/>
-  <g transform="translate(230 90) scale(6.15)">
-    <circle cx="60" cy="60" r="56" fill="#fffaf2" stroke="#e7dccb" stroke-width="2"/>
-    <path d="M75 18c15 17 10 33-2 45 13-7 28-5 39 5-20 2-33 10-41 25l-8 15H47c-27 0-45-19-45-45 0-25 19-45 46-45 19 0 34 10 41 25H71c-5-7-13-11-23-11-17 0-29 13-29 31s12 31 29 31h20l8-14c-7-10-12-26-1-62z" fill="#0f3b22"/>
-    <path d="M20 55h23m-16-13h28m-18-13h24" stroke="#b08a36" stroke-width="4" stroke-linecap="round" fill="none"/>
-    <circle cx="47" cy="55" r="4" fill="#b08a36"/>
-    <circle cx="59" cy="42" r="4" fill="#b08a36"/>
-    <circle cx="65" cy="29" r="4" fill="#b08a36"/>
-    <path d="M58 101c-4 13-13 16-24 20m24-20c0 14 0 20-8 29m8-29c8 14 12 19 26 25" stroke="#b08a36" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-    <path d="M84 21c12 2 21 10 25 21-14 2-25-4-31-16m24 22c12-8 27-8 39-1-11 9-25 10-39 1" fill="#0f3b22"/>
+  <desc id="desc">Dark green G with leaf sprout and gold circuit roots, with Geyvak.com wordmark.</desc>
+  <rect width="640" height="220" fill="none"/>
+  <g transform="translate(50 25)">
+    <path d="M104 12c-47 0-85 38-85 85s38 85 85 85c31 0 58-16 73-41h-44c-8 7-18 11-29 11-30 0-54-24-54-55s24-55 54-55c16 0 30 7 40 18l22-22c-16-17-38-26-62-26Z" fill="#0f3b22"/>
+    <path d="M107 72h83v33h-50c-4 18-19 31-38 31-22 0-40-18-40-40s18-40 40-40c12 0 22 5 30 13l24-22c-14-15-33-23-54-23-40 0-72 32-72 72s32 72 72 72c42 0 72-31 72-76 0-7-1-14-2-20h-65Z" fill="#0f3b22" opacity=".92"/>
+    <path d="M148 30c16-22 36-25 55-21-2 19-11 36-32 43-10 3-19 2-27-1 0-7 1-14 4-21Z" fill="#1d6b42"/>
+    <path d="M159 45c17-18 30-27 43-35" fill="none" stroke="#0f3b22" stroke-width="5" stroke-linecap="round"/>
+    <path d="M190 50c12-15 27-17 42-14-1 16-9 29-26 35-8 3-16 2-22-1 0-7 2-13 6-20Z" fill="#2b7d50"/>
+    <path d="M197 65c12-12 22-20 34-27" fill="none" stroke="#0f3b22" stroke-width="4" stroke-linecap="round"/>
+    <path d="M145 143c8 15 14 28 18 41M126 148c3 14 5 26 6 38M164 134c15 9 28 17 38 28M104 154c-4 12-9 22-16 32" fill="none" stroke="#b08a36" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="164" cy="184" r="5" fill="#b08a36"/><circle cx="132" cy="188" r="5" fill="#b08a36"/><circle cx="204" cy="163" r="5" fill="#b08a36"/><circle cx="88" cy="187" r="5" fill="#b08a36"/>
   </g>
-  <text x="600" y="935" text-anchor="middle" fill="#0f3b22" font-family="Georgia, 'Times New Roman', serif" font-size="128" letter-spacing="8">Geyvak.com</text>
-  <g fill="none" stroke="#b08a36" stroke-width="3" stroke-linecap="round">
-    <path d="M285 1035H515"/>
-    <path d="M685 1035H915"/>
+  <g transform="translate(275 72)">
+    <text x="0" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="#0f3b22">Geyvak</text>
+    <text x="212" y="56" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#b08a36">.com</text>
+    <path d="M5 78h300" stroke="#b08a36" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+    <text x="0" y="108" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#314437" opacity=".9">Technology with roots. Service with care.</text>
   </g>
-  <circle cx="555" cy="1035" r="7" fill="#b08a36"/>
-  <circle cx="645" cy="1035" r="7" fill="#b08a36"/>
-  <path d="M600 1000c22 20 22 47 0 70-22-23-22-50 0-70z" fill="#0f3b22"/>
-  <path d="M600 1018v58" stroke="#b08a36" stroke-width="2.5" stroke-linecap="round"/>
 </svg>
