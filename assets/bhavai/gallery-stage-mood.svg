@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+<title id="title">Bhavai stage mood visual</title>
+<desc id="desc">A vibrant abstract Bhavai-inspired stage scene with theatrical lighting, draped textile forms and performance energy.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#070b14"/><stop offset="0.46" stop-color="#151d31"/><stop offset="1" stop-color="#681a25"/></linearGradient>
+  <radialGradient id="goldGlow" cx="70%" cy="30%" r="55%"><stop offset="0" stop-color="#ffd787" stop-opacity="0.65"/><stop offset="0.38" stop-color="#d39a34" stop-opacity="0.22"/><stop offset="1" stop-color="#d39a34" stop-opacity="0"/></radialGradient>
+  <radialGradient id="redGlow" cx="22%" cy="70%" r="55%"><stop offset="0" stop-color="#b43a32" stop-opacity="0.5"/><stop offset="1" stop-color="#b43a32" stop-opacity="0"/></radialGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="8"/></filter>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<rect width="1600" height="1000" fill="url(#goldGlow)"/>
+<rect width="1600" height="1000" fill="url(#redGlow)"/>
+<path d="M0 800 C260 620 450 770 640 590 C840 400 1120 420 1600 220 L1600 1000 L0 1000 Z" fill="#0a0e18" opacity="0.72"/>
+<path d="M135 190 C300 130 480 170 610 245 C515 320 330 346 160 292 Z" fill="#d39a34" opacity="0.22" filter="url(#soft)"/>
+<path d="M1180 130 C1320 185 1430 305 1470 470 C1325 430 1205 315 1138 180 Z" fill="#ffd787" opacity="0.24" filter="url(#soft)"/>
+<g transform="translate(760 320)">
+  <ellipse cx="0" cy="420" rx="285" ry="42" fill="#05070c" opacity="0.52"/>
+  <path d="M-48 120 C-110 235 -105 405 -170 575 L70 575 C30 420 68 290 35 142 Z" fill="#b32636"/>
+  <path d="M42 145 C125 245 190 370 252 575 L30 575 C58 440 12 300 -18 145 Z" fill="#0f6570"/>
+  <path d="M-10 95 C-80 150 -122 240 -142 350 C-46 295 48 280 146 335 C134 240 86 150 28 94 Z" fill="#d39a34"/>
+  <circle cx="0" cy="62" r="46" fill="#f3c27c"/>
+  <path d="M-52 54 C-10 0 42 0 65 53 C45 21 -8 29 -52 54 Z" fill="#11151f"/>
+  <path d="M-170 575 C-90 620 80 628 252 575" fill="none" stroke="#ffd787" stroke-width="16" opacity="0.78"/>
+  <path d="M-106 242 C-245 250 -330 330 -365 438" fill="none" stroke="#ead7b3" stroke-width="28" stroke-linecap="round" opacity="0.9"/>
+  <path d="M106 250 C262 235 366 306 430 408" fill="none" stroke="#ead7b3" stroke-width="28" stroke-linecap="round" opacity="0.9"/>
+  <g fill="#fff8eb" opacity="0.9">
+    <circle cx="-72" cy="235" r="9"/><circle cx="-42" cy="270" r="7"/><circle cx="-2" cy="248" r="8"/><circle cx="38" cy="285" r="7"/><circle cx="82" cy="248" r="8"/>
+  </g>
+</g>
+<g opacity="0.42" fill="none" stroke="#d39a34" stroke-width="3">
+  <path d="M120 880 C280 820 420 850 560 790"/>
+  <path d="M980 835 C1125 775 1290 800 1465 705"/>
+  <path d="M250 140 C355 90 520 95 650 155"/>
+</g>
+</svg>
