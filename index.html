@@ -3,31 +3,190 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Geyvak.com | Under Maintenance</title>
-  <meta name="description" content="Geyvak.com is temporarily under maintenance. Please email hello@geyvak.com for urgent enquiries.">
-  <meta name="robots" content="noindex, nofollow">
+  <title>The Retro Reva Call Line | Geyvak</title>
+  <meta name="description" content="Private, paid Retro Reva calls by appointment: conversation, creative companionship and old-cinema sparkle. English, Hindi and Gujarati.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#3d1022">
   <style>
-    :root{--green:#0f3b22;--gold:#b08a36;--cream:#fffaf2;--soft:#f4eadc;--ink:#102016;--muted:#627168;--line:#e7dccb;--white:#fff;--shadow:0 26px 90px -38px rgba(15,59,34,.6)}
+    :root{--wine:#3d1022;--maroon:#651a35;--rose:#bd7c89;--gold:#c8a25a;--cream:#fff9ee;--paper:#f4eadc;--ink:#20151a;--muted:#706069;--line:#e5d4c6;--white:#fff;--shadow:0 26px 80px -42px rgba(61,16,34,.72)}
     *{box-sizing:border-box}
-    body{margin:0;min-height:100vh;display:grid;place-items:center;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;color:var(--ink);background:radial-gradient(circle at 84% 0,rgba(176,138,54,.18),transparent 34%),radial-gradient(circle at 10% 92%,rgba(15,59,34,.12),transparent 36%),var(--cream);padding:28px}
-    main{width:min(780px,100%);background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:34px;box-shadow:var(--shadow);padding:clamp(30px,6vw,58px);text-align:center}
-    .eyebrow{color:var(--gold);font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
-    h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.04em;font-size:clamp(2.4rem,7vw,5.2rem);line-height:1;margin:0 0 20px;color:var(--green)}
-    p{font-size:clamp(1rem,2vw,1.18rem);color:#243a2d;margin:0 auto 18px;max-width:600px}
-    .note{color:var(--muted);font-size:.95rem;margin-top:22px}
-    a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 22px;border-radius:999px;background:var(--green);color:var(--cream);text-decoration:none;font-weight:850;margin-top:16px}
-    footer{margin-top:30px;color:var(--muted);font-size:.86rem}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(circle at 82% 0,rgba(200,162,90,.23),transparent 27rem),radial-gradient(circle at 4% 46%,rgba(189,124,137,.16),transparent 25rem),var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}
+    .hero{padding:26px 0 70px;min-height:720px;display:grid;align-content:start;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;width:420px;height:420px;right:-170px;bottom:-190px;border:1px solid rgba(200,162,90,.46);border-radius:50%;box-shadow:0 0 0 38px rgba(200,162,90,.07),0 0 0 78px rgba(200,162,90,.04);pointer-events:none}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:18px;position:relative;z-index:1}
+    .brand{font-family:Georgia,"Times New Roman",serif;font-size:1.3rem;letter-spacing:.03em;text-decoration:none;color:var(--wine)}
+    .status{font-size:.77rem;letter-spacing:.11em;text-transform:uppercase;font-weight:800;color:var(--maroon);padding:8px 12px;border:1px solid rgba(101,26,53,.22);background:rgba(255,255,255,.46);border-radius:999px;white-space:nowrap}
+    .hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:46px;align-items:center;position:relative;z-index:1;margin-top:84px}
+    .eyebrow{font-size:.75rem;font-weight:900;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);margin:0 0 15px}
+    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;color:var(--wine)}
+    h1{font-size:clamp(3.3rem,8vw,7.1rem);letter-spacing:-.065em;line-height:.89;margin:0;max-width:790px}
+    .lead{font-size:clamp(1.12rem,2vw,1.34rem);max-width:640px;margin:28px 0;color:#3f2b33}
+    .labels{display:flex;flex-wrap:wrap;gap:9px;margin:26px 0 30px}
+    .label{padding:7px 11px;border:1px solid var(--line);background:rgba(255,255,255,.63);border-radius:999px;font-size:.86rem;color:#5d4950}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 21px;border-radius:999px;text-decoration:none;font-weight:850;transition:transform .2s ease,box-shadow .2s ease;border:1px solid transparent;cursor:pointer;font-size:.98rem}
+    .button:hover{transform:translateY(-2px);box-shadow:0 14px 30px -18px rgba(61,16,34,.6)}
+    .button.primary{background:var(--wine);color:var(--cream)}
+    .button.secondary{background:rgba(255,255,255,.6);color:var(--wine);border-color:rgba(61,16,34,.22)}
+    .poster{position:relative;background:linear-gradient(150deg,#54152f 0%,#2a0a18 53%,#6a1d38 100%);border-radius:29px;padding:34px;min-height:420px;box-shadow:var(--shadow);color:var(--cream);isolation:isolate;overflow:hidden}
+    .poster:before,.poster:after{content:"";position:absolute;border:1px solid rgba(200,162,90,.45);border-radius:50%;z-index:-1}
+    .poster:before{width:390px;height:390px;right:-178px;top:-164px}.poster:after{width:220px;height:220px;left:-120px;bottom:-92px}
+    .poster-kicker{font-size:.74rem;letter-spacing:.17em;text-transform:uppercase;color:#e5c982;font-weight:850;margin:0 0 34px}
+    .poster h2{color:var(--cream);font-size:clamp(2.6rem,5vw,4.3rem);line-height:.9;letter-spacing:-.05em;margin:0;max-width:420px}
+    .poster p{color:#f6dfd0;font-size:1.07rem;max-width:400px;margin:24px 0 0}
+    .poster-seal{position:absolute;right:28px;bottom:26px;width:94px;height:94px;display:grid;place-items:center;text-align:center;border:1px solid rgba(229,201,130,.65);border-radius:50%;color:#e5c982;font-family:Georgia,"Times New Roman",serif;font-size:.92rem;line-height:1.12;transform:rotate(-9deg)}
+    section{padding:76px 0}
+    .section-heading{max-width:720px;margin-bottom:33px}.section-heading h2{font-size:clamp(2.35rem,5vw,4rem);letter-spacing:-.05em;line-height:.96;margin:0 0 15px}.section-heading p{margin:0;color:var(--muted);font-size:1.06rem}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:21px;padding:25px;box-shadow:0 14px 38px -35px rgba(61,16,34,.68)}.card .number{font-size:.79rem;color:var(--gold);font-weight:900;letter-spacing:.12em;text-transform:uppercase}.card h3{font-size:1.66rem;line-height:1;margin:13px 0 11px}.card p{color:var(--muted);margin:0}
+    .pricing{background:linear-gradient(160deg,rgba(101,26,53,.08),rgba(200,162,90,.08));border-top:1px solid rgba(200,162,90,.22);border-bottom:1px solid rgba(200,162,90,.22)}.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.price{background:var(--white);border:1px solid var(--line);border-radius:23px;padding:29px;display:flex;flex-direction:column;min-height:300px}.price.featured{border-color:rgba(101,26,53,.5);box-shadow:0 22px 48px -35px rgba(61,16,34,.68);transform:translateY(-8px)}.price .time{font-size:.83rem;font-weight:900;text-transform:uppercase;letter-spacing:.13em;color:var(--gold)}.price h3{font-size:1.84rem;margin:15px 0 9px;line-height:1}.price .amount{font-family:Georgia,"Times New Roman",serif;font-size:2.8rem;color:var(--wine);line-height:1;margin:18px 0 10px}.price p{color:var(--muted);margin:0 0 24px}.price .button{margin-top:auto;width:100%}
+    .booking{display:grid;grid-template-columns:.86fr 1.14fr;gap:44px;align-items:start}.booking-copy{position:sticky;top:24px}.booking-copy h2{font-size:clamp(2.45rem,5vw,4.2rem);line-height:.95;letter-spacing:-.055em;margin:0 0 18px}.booking-copy p{color:var(--muted);font-size:1.05rem}.mini-list{display:grid;gap:12px;margin-top:24px}.mini-list div{padding-left:26px;position:relative}.mini-list div:before{content:"✦";position:absolute;left:0;color:var(--gold)}
+    form{background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:26px;padding:clamp(22px,4vw,38px);box-shadow:var(--shadow)}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:grid;gap:7px;margin-bottom:15px}.field.full{grid-column:1/-1}label{font-size:.88rem;font-weight:780;color:#4d323d}input,select,textarea{width:100%;font:inherit;color:var(--ink);background:#fffdf9;border:1px solid #ddcfc3;border-radius:12px;padding:12px 13px;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--maroon);box-shadow:0 0 0 3px rgba(101,26,53,.1)}textarea{resize:vertical;min-height:115px}.check{display:flex;gap:10px;align-items:flex-start;margin:4px 0 18px;color:var(--muted);font-size:.9rem}.check input{width:auto;margin-top:5px}.form-note{font-size:.86rem;color:var(--muted);margin:15px 0 0}
+    .boundaries{padding-top:15px}.notice{border:1px solid rgba(101,26,53,.28);border-left:5px solid var(--maroon);border-radius:16px;background:#fff9f4;padding:22px 23px}.notice h3{margin:0 0 8px;font-size:1.42rem}.notice p{margin:0;color:#5b414b}.notice a{color:var(--maroon);font-weight:800}
+    footer{padding:34px 0 46px;color:#725c64;font-size:.9rem}.footer-grid{display:flex;justify-content:space-between;gap:18px;align-items:center;border-top:1px solid var(--line);padding-top:25px}.footer-grid p{margin:0}
+    @media(max-width:840px){.hero{min-height:auto}.hero-grid,.booking{grid-template-columns:1fr;gap:30px}.hero-grid{margin-top:58px}.poster{min-height:350px}.booking-copy{position:static}.cards,.price-grid{grid-template-columns:1fr}.price.featured{transform:none}.field-grid{grid-template-columns:1fr}.footer-grid{align-items:flex-start;flex-direction:column}}
+    @media(max-width:480px){.wrap{width:min(100% - 28px,1120px)}.hero{padding-top:17px}.status{font-size:.67rem;padding:7px 9px}.brand{font-size:1.13rem}.hero-grid{margin-top:48px}.poster{padding:27px 24px}.poster-seal{right:20px;bottom:20px;width:76px;height:76px;font-size:.75rem}.actions .button{width:100%}section{padding:57px 0}}
   </style>
 </head>
 <body>
-  <main aria-labelledby="maintenance-title">
-    <div class="eyebrow">Geyvak.com</div>
-    <h1 id="maintenance-title">We are under maintenance.</h1>
-    <p>Geyvak.com is being refreshed with care. The site will return once the update is ready.</p>
-    <p>For urgent enquiries, please contact us by email.</p>
-    <a href="mailto:hello@geyvak.com">hello@geyvak.com</a>
-    <p class="note">Thank you for your patience.</p>
-    <footer>Technology with roots. Service with care.</footer>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="wrap">
+        <nav aria-label="Primary">
+          <a class="brand" href="#top" id="top">Geyvak</a>
+          <span class="status">Private bookings open</span>
+        </nav>
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">A Geyvak experience</p>
+            <h1 id="page-title">The Retro Reva<br>Call Line</h1>
+            <p class="lead">A private, paid call for conversation, creative companionship, cultural stories and a little old-cinema sparkle—held with care, boundaries and genuine presence.</p>
+            <div class="labels" aria-label="Call line features">
+              <span class="label">By appointment only</span>
+              <span class="label">English · Hindi · Gujarati</span>
+              <span class="label">Audio or video</span>
+              <span class="label">Melbourne-based · global welcome</span>
+            </div>
+            <div class="actions">
+              <a class="button primary" href="#book">Request a call</a>
+              <a class="button secondary" href="mailto:hello@geyvak.com?subject=Retro%20Reva%20Call%20Line%20enquiry">Ask a question</a>
+            </div>
+          </div>
+          <aside class="poster" aria-label="Retro Reva Call Line introduction">
+            <p class="poster-kicker">A soft place to land</p>
+            <h2>Not a hotline.<br>A human line.</h2>
+            <p>Bring a story, a song, a creative knot, a lonely evening, or simply yourself. We begin where you are.</p>
+            <div class="poster-seal">Geyvak<br>with care</div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Simple, private, clear</p>
+          <h2 id="how-title">How the Call Line works</h2>
+          <p>This is an appointment-led service, not a premium-rate phone number. Your time, format and payment are confirmed before a call begins.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><p class="number">01 · Choose</p><h3>Pick your time</h3><p>Choose a 15, 30 or 60-minute private call and tell us whether you prefer audio or video.</p></article>
+          <article class="card"><p class="number">02 · Confirm</p><h3>Receive your details</h3><p>Geyvak replies with available times and a secure payment request. Nothing is charged without your approval.</p></article>
+          <article class="card"><p class="number">03 · Connect</p><h3>Meet with care</h3><p>At the agreed time, connect through your confirmed call link or number. No recordings. No surprises.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" aria-labelledby="pricing-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Launch booking fees</p>
+          <h2 id="pricing-title">Choose your little pocket of time</h2>
+          <p>All sessions are one-to-one. Fees are in Australian dollars and are confirmed before your booking is finalised.</p>
+        </div>
+        <div class="price-grid">
+          <article class="price">
+            <p class="time">15 minutes</p><h3>The First Hello</h3><p class="amount">A$19</p><p>A gentle introduction for a quick check-in, a question, or a first shared moment.</p>
+            <a class="button secondary" href="#book" data-session="The First Hello — 15 minutes — A$19">Book this session</a>
+          </article>
+          <article class="price featured">
+            <p class="time">30 minutes</p><h3>Chai, Cinema &amp; Company</h3><p class="amount">A$39</p><p>Space to talk, play with an idea, unspool a story or simply share good company.</p>
+            <a class="button primary" href="#book" data-session="Chai, Cinema & Company — 30 minutes — A$39">Book this session</a>
+          </article>
+          <article class="price">
+            <p class="time">60 minutes</p><h3>The Salon</h3><p class="amount">A$75</p><p>Unhurried creative companionship for deeper conversation, ideas, art and reflection.</p>
+            <a class="button secondary" href="#book" data-session="The Salon — 60 minutes — A$75">Book this session</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="book" aria-labelledby="book-title">
+      <div class="wrap booking">
+        <div class="booking-copy">
+          <p class="eyebrow">Request a private appointment</p>
+          <h2 id="book-title">Let the first note be yours.</h2>
+          <p>Complete this short request and your email app will open with the details ready to send. Geyvak will reply with availability, a confirmed format and payment details.</p>
+          <div class="mini-list"><div>Use a name and email you are comfortable sharing.</div><div>Choose audio or video; the exact platform is agreed before the call.</div><div>A booking is confirmed only after availability and payment are agreed.</div></div>
+        </div>
+        <form id="booking-form" novalidate>
+          <div class="field-grid">
+            <div class="field"><label for="name">Name or chosen name</label><input id="name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="session">Session</label><select id="session" name="session" required><option value="">Choose a session</option><option>The First Hello — 15 minutes — A$19</option><option>Chai, Cinema &amp; Company — 30 minutes — A$39</option><option>The Salon — 60 minutes — A$75</option></select></div>
+            <div class="field"><label for="format">Preferred format</label><select id="format" name="format" required><option value="">Choose a format</option><option>Audio call</option><option>Video call</option><option>Open to either</option></select></div>
+            <div class="field full"><label for="time">Preferred days / time window / time zone</label><input id="time" name="time" placeholder="Example: Tuesday or Thursday evening, Melbourne time" required></div>
+            <div class="field full"><label for="note">What would you like this call to hold? <span style="font-weight:500;color:#806b72">Optional</span></label><textarea id="note" name="note" placeholder="A story, an idea, a creative question, a little company…"></textarea></div>
+          </div>
+          <label class="check"><input id="agreement" type="checkbox" required><span>I understand this is a private, paid creative-conversation service—not crisis support, therapy, medical advice, legal advice or an emergency line. I am 18 or over, and I agree not to record the call.</span></label>
+          <button class="button primary" type="submit">Send booking request</button>
+          <p class="form-note">Your request is sent to <a href="mailto:hello@geyvak.com">hello@geyvak.com</a>. Do not include passwords, payment-card details or sensitive identity documents.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="boundaries" aria-labelledby="boundaries-title">
+      <div class="wrap">
+        <div class="notice">
+          <h3 id="boundaries-title">Care and boundaries</h3>
+          <p>The Retro Reva Call Line is for respectful adult conversation and creative companionship. It does not provide counselling, medical care, legal advice, emergency assistance, sexually explicit services or support for situations involving immediate danger. If you are in crisis in Australia, contact Lifeline on <a href="tel:+61131114">13 11 14</a>; if you are in immediate danger, contact local emergency services.</p>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer>
+    <div class="wrap footer-grid"><p><strong>Geyvak</strong> · Technology with roots. Service with care.</p><p>Private booking enquiries: <a href="mailto:hello@geyvak.com">hello@geyvak.com</a></p></div>
+  </footer>
+  <script>
+    (function(){
+      const form=document.getElementById('booking-form');
+      const session=document.getElementById('session');
+      document.querySelectorAll('[data-session]').forEach(function(link){
+        link.addEventListener('click',function(){session.value=link.getAttribute('data-session');});
+      });
+      form.addEventListener('submit',function(event){
+        event.preventDefault();
+        if(!form.checkValidity()){
+          form.reportValidity();
+          return;
+        }
+        const details={
+          'Name / chosen name':document.getElementById('name').value.trim(),
+          'Email':document.getElementById('email').value.trim(),
+          'Session':session.value,
+          'Preferred format':document.getElementById('format').value,
+          'Preferred time':document.getElementById('time').value.trim(),
+          'What I would like the call to hold':document.getElementById('note').value.trim() || 'Not specified'
+        };
+        const body=['Hello Geyvak,','','I would like to request a Retro Reva Call Line appointment.',''];
+        Object.keys(details).forEach(function(key){body.push(key+': '+details[key]);});
+        body.push('','I confirm that I have read the service boundaries on the booking page.','','Thank you.');
+        const subject='Retro Reva Call Line booking request — '+details['Session'];
+        window.location.href='mailto:hello@geyvak.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body.join('\n'));
+      });
+    })();
+  </script>
 </body>
 </html>
