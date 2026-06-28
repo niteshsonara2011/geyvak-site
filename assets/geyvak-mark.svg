@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Geyvak mark</title>
+  <desc id="desc">Circular G mark with a leaf and roots.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M84 25a42 42 0 1 0 2 64" stroke="#0f3b22" stroke-width="10"/>
+    <path d="M84 62H58" stroke="#0f3b22" stroke-width="10"/>
+    <path d="M58 62c-16 0-28 11-28 26 13-8 29-8 44-1" stroke="#0f3b22" stroke-width="8"/>
+    <path d="M30 47c15-19 32-27 52-25" stroke="#d4ad3f" stroke-width="7"/>
+    <path d="M28 60c14-15 29-22 46-21" stroke="#d4ad3f" stroke-width="6"/>
+    <path d="M31 73c11-11 23-16 36-15" stroke="#d4ad3f" stroke-width="6"/>
+    <path d="M72 33c12-6 20-3 26 8-10 5-19 3-26-8Z" fill="#173f24" stroke="#0f3b22" stroke-width="3"/>
+    <path d="M89 51c11-3 18 0 22 9-9 4-17 2-22-9Z" fill="#285332" stroke="#0f3b22" stroke-width="3"/>
+    <path d="M59 86c0 10-5 19-20 24m20-24c2 11 1 20-3 28m3-28c9 9 16 17 19 27m-19-27c-10 7-21 11-34 12m34-12c14 4 25 9 35 18" stroke="#d4ad3f" stroke-width="4"/>
+  </g>
+  <circle cx="42" cy="83" r="7" fill="#f2cf4a"/>
+</svg>
