@@ -1,16 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" role="img" aria-labelledby="title desc">
   <title id="title">Geyvak mark</title>
-  <desc id="desc">Circular G mark with a leaf and roots.</desc>
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M84 25a42 42 0 1 0 2 64" stroke="#0f3b22" stroke-width="10"/>
-    <path d="M84 62H58" stroke="#0f3b22" stroke-width="10"/>
-    <path d="M58 62c-16 0-28 11-28 26 13-8 29-8 44-1" stroke="#0f3b22" stroke-width="8"/>
-    <path d="M30 47c15-19 32-27 52-25" stroke="#d4ad3f" stroke-width="7"/>
-    <path d="M28 60c14-15 29-22 46-21" stroke="#d4ad3f" stroke-width="6"/>
-    <path d="M31 73c11-11 23-16 36-15" stroke="#d4ad3f" stroke-width="6"/>
-    <path d="M72 33c12-6 20-3 26 8-10 5-19 3-26-8Z" fill="#173f24" stroke="#0f3b22" stroke-width="3"/>
-    <path d="M89 51c11-3 18 0 22 9-9 4-17 2-22-9Z" fill="#285332" stroke="#0f3b22" stroke-width="3"/>
-    <path d="M59 86c0 10-5 19-20 24m20-24c2 11 1 20-3 28m3-28c9 9 16 17 19 27m-19-27c-10 7-21 11-34 12m34-12c14 4 25 9 35 18" stroke="#d4ad3f" stroke-width="4"/>
-  </g>
-  <circle cx="42" cy="83" r="7" fill="#f2cf4a"/>
+  <desc id="desc">Deep teal G with a green leaf and flowing wave.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a3c43"/><stop offset="0.55" stop-color="#0d5157"/><stop offset="1" stop-color="#062f35"/></linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#aab58a"/><stop offset="1" stop-color="#74834d"/></linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f8789"/><stop offset="1" stop-color="#174f57"/></linearGradient>
+  </defs>
+  <path d="M99 24A50 50 0 1 0 103 105" fill="none" stroke="url(#g)" stroke-width="15"/>
+  <path d="M76 69h42v34" fill="none" stroke="url(#g)" stroke-width="15"/>
+  <path d="M28 66c19-6 37 2 46 19 6 10 5 22-1 31-14-1-27-7-37-18-9-10-12-21-8-32Z" fill="url(#leaf)"/>
+  <path d="M34 69c15 9 27 21 34 38" fill="none" stroke="#fffaf2" stroke-width="4" stroke-linecap="round"/>
+  <path d="M20 106c22 16 45 21 67 11 17-8 29-7 43 1-20 20-44 29-69 25-18-3-32-12-41-37Z" fill="url(#wave)"/>
+  <path d="M24 103c25 20 51 23 74 9 12-7 24-6 36 0-13 3-24 10-33 19-16 15-37 18-58 8-9-4-15-16-19-36Z" fill="none" stroke="#fffaf2" stroke-width="4.5" stroke-linecap="round"/>
 </svg>
