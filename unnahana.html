@@ -3,41 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>UNNAHANA | Coming Soon</title>
-  <meta name="description" content="UNNAHANA is taking shape. Coming soon. Maybe sooner.">
+  <title>UNNAHANA | Welcome to the Universe</title>
+  <meta name="description" content="Welcome to the UNNAHANA universe. Clothing, textiles, accessories and everyday stories are taking shape. Coming soon. Maybe sooner.">
   <meta name="robots" content="index,follow">
   <style>
-    :root{--forest:#15382b;--clay:#9e5435;--gold:#b28a4b;--cream:#f7efe4;--paper:#fffaf3;--ink:#1b241f;--muted:#647067;--line:#ded1c0;--shadow:0 24px 70px -42px rgba(13,40,31,.6)}
-    *{box-sizing:border-box}
-    body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 10%,rgba(178,138,75,.18),transparent 34%),radial-gradient(circle at 88% 86%,rgba(21,56,43,.12),transparent 36%),var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    a{color:inherit;text-decoration:none}
-    .page{min-height:100vh;display:grid;grid-template-rows:auto 1fr auto}
-    .wrap{width:min(1120px,calc(100% - 36px));margin:auto}
-    header{border-bottom:1px solid var(--line);background:rgba(255,250,243,.88);backdrop-filter:blur(14px)}
-    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{font:400 1.45rem/1 Georgia,"Times New Roman",serif;letter-spacing:.17em;color:var(--forest)}
-    .home{font-size:.8rem;font-weight:850;color:#35453b}
-    main{display:grid;place-items:center;padding:70px 0}
-    .hero{width:min(900px,100%);text-align:center;padding:clamp(38px,7vw,78px);border:1px solid var(--line);border-radius:38px;background:rgba(255,255,255,.68);box-shadow:var(--shadow)}
-    .eyebrow{color:var(--clay);font-size:.72rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
-    h1{margin:18px 0 20px;font:400 clamp(3.6rem,10vw,8rem)/.92 Georgia,"Times New Roman",serif;letter-spacing:-.045em;color:var(--forest)}
-    h1 span{display:block;color:var(--clay);font-size:.46em;line-height:1.15;margin-top:18px;letter-spacing:-.02em}
-    p{max-width:650px;margin:0 auto;color:#4d5b52;font-size:clamp(1rem,2vw,1.18rem);line-height:1.75}
-    .actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap;margin-top:30px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:999px;border:1px solid var(--line);font-size:.88rem;font-weight:850}
-    .primary{background:var(--forest);border-color:var(--forest);color:var(--cream)}
-    .secondary{background:#fff;color:var(--forest)}
-    footer{border-top:1px solid var(--line);background:rgba(247,239,228,.78);padding:28px 0}
-    .foot{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    .small{font-size:.77rem;color:var(--muted)}
-    @media(max-width:620px){.wrap{width:min(100% - 24px,1120px)}.nav{min-height:68px}.brand{font-size:1.08rem}.hero{border-radius:28px;padding:46px 22px}h1{font-size:clamp(3.3rem,18vw,5.8rem)}.foot{display:block}.small{margin-top:8px}}
+    :root{--forest:#15382b;--deep:#0d281f;--clay:#9e5435;--gold:#b28a4b;--cream:#f7efe4;--paper:#fffaf3;--ink:#1b241f;--muted:#647067;--line:#ded1c0;--white:#fff;--shadow:0 24px 70px -42px rgba(13,40,31,.62)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 10% 6%,rgba(178,138,75,.14),transparent 31%),var(--paper);color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}img{display:block;width:100%;height:auto}.wrap{width:min(1180px,calc(100% - 36px));margin:auto}
+    .top{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);background:rgba(255,250,243,.94);backdrop-filter:blur(14px)}.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font:400 1.45rem/1 Georgia,"Times New Roman",serif;letter-spacing:.17em;color:var(--forest)}.links{display:flex;gap:19px;list-style:none;padding:0;margin:0;font-size:.79rem;font-weight:850;color:#35453b}
+    .hero{padding:68px 0 56px;background:linear-gradient(180deg,rgba(255,250,243,.7),rgba(247,239,228,.72))}.hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}.eyebrow{color:var(--clay);font-size:.7rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.03em}h1{font-size:clamp(3.3rem,7.5vw,7rem);line-height:.92;color:var(--forest);margin:14px 0 22px}h1 span{display:block;color:var(--clay);font-size:.45em;line-height:1.2;margin-top:18px;letter-spacing:-.02em}.lead{font-size:clamp(1.05rem,1.8vw,1.24rem);max-width:650px;color:#35443b;margin:0}.quiet{max-width:650px;color:#566159;margin:18px 0 0}.hero-art{overflow:hidden;border:1px solid var(--line);border-radius:36px;background:#e8ddd0;box-shadow:var(--shadow)}.hero-art img{aspect-ratio:4/4.6;object-fit:cover}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:999px;border:1px solid var(--line);font-size:.88rem;font-weight:850}.primary{background:var(--forest);border-color:var(--forest);color:var(--cream)}.secondary{background:#fff;color:var(--forest)}
+    .section{padding:78px 0}.soft{background:var(--cream);border-block:1px solid var(--line)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:32px}.section-head p{max-width:650px;color:#4d594f;margin:0}h2{font-size:clamp(2.2rem,4.2vw,3.7rem);line-height:1.04;color:var(--forest);margin:8px 0 0}
+    .universe{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.world{overflow:hidden;border:1px solid var(--line);border-radius:30px;background:var(--white);box-shadow:var(--shadow)}.world img{aspect-ratio:16/10;object-fit:cover;background:#e8ddd0}.world.carry img{object-fit:contain;padding:24px;background:#efe4d5}.copy{padding:25px}.copy span{display:block;color:var(--clay);font-size:.68rem;font-weight:900;letter-spacing:.17em;text-transform:uppercase}.copy h3{font-size:clamp(1.7rem,3vw,2.4rem);margin:8px 0 9px;color:var(--forest)}.copy p{margin:0;color:#4c594f}.coming{display:inline-flex;margin-top:17px;color:var(--forest);font-size:.82rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--gold)}
+    .promise{background:var(--forest);color:var(--cream)}.promise h2{color:var(--cream)}.promise .eyebrow{color:#e6c78d}.promise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px;margin-top:31px}.promise-card{padding:23px;border:1px solid rgba(255,255,255,.16);border-radius:24px;background:rgba(255,255,255,.06)}.promise-card strong{display:block;color:#e6c78d;margin-bottom:7px}.promise-card span{color:rgba(255,250,243,.84);font-size:.9rem}
+    .closing{text-align:center}.closing p{max-width:690px;margin:0 auto 26px;color:#4c594f}footer{padding:34px 0;background:var(--cream);border-top:1px solid var(--line)}.foot{display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap}.small{font-size:.77rem;color:var(--muted);max-width:700px}
+    @media(max-width:940px){.hero-grid{grid-template-columns:1fr}.hero-art{max-width:690px}.promise-grid{grid-template-columns:repeat(2,1fr)}.links{gap:12px;font-size:.72rem}}
+    @media(max-width:650px){.wrap{width:min(100% - 24px,1180px)}.links li:nth-child(2){display:none}.hero{padding:50px 0 40px}.hero-grid{gap:28px}h1{font-size:clamp(3.1rem,16vw,5.6rem)}.section{padding:60px 0}.section-head{display:block}.section-head p{margin-top:13px}.universe,.promise-grid{grid-template-columns:1fr}.world img{aspect-ratio:4/3}.brand{font-size:1.08rem}.copy{padding:21px}}
   </style>
 </head>
 <body>
-  <div class="page">
-    <header><div class="wrap"><nav class="nav" aria-label="UNNAHANA navigation"><div class="brand">UNNAHANA</div><a class="home" href="/">Geyvak</a></nav></div></header>
-    <main><div class="wrap"><section class="hero"><div class="eyebrow">A new chapter is taking shape</div><h1>Coming soon.<span>Maybe sooner.</span></h1><p>Clothing, textiles and everyday stories are being developed with patience, clarity and care. We will open the doors when the first release is truly ready.</p><div class="actions"><a class="btn primary" href="mailto:hello@geyvak.com?subject=UNNAHANA%20Updates">Stay close</a><a class="btn secondary" href="/">Return to Geyvak</a></div></section></div></main>
-    <footer><div class="wrap foot"><div class="brand">UNNAHANA</div><div class="small">A Geyvak fashion and lifestyle initiative.</div></div></footer>
-  </div>
+  <header class="top"><div class="wrap"><nav class="nav" aria-label="UNNAHANA navigation"><a class="brand" href="/unnahana.html">UNNAHANA</a><ul class="links"><li><a href="#universe">The universe</a></li><li><a href="#glimpse">What is coming</a></li><li><a href="#stay-close">Stay close</a></li><li><a href="/">Geyvak</a></li></ul></nav></div></header>
+  <main>
+    <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Welcome to the UNNAHANA universe</div><h1>Coming soon.<span>Maybe sooner.</span></h1><p class="lead">A world of clothing, textiles, useful objects and stories shaped between Indian memory and contemporary Australian life.</p><p class="quiet">This is not the full collection yet. It is the first light through the door.</p><div class="actions"><a class="btn primary" href="#universe">Step inside</a><a class="btn secondary" href="mailto:hello@geyvak.com?subject=UNNAHANA%20Updates">Stay close</a></div></div><figure class="hero-art"><img src="/assets/unnahana/editorial/timeless-hero.webp" alt="Woman in an ivory printed shirt inside a warm textile studio"></figure></div></section>
+
+    <section class="section soft" id="universe"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Four glimpses</div><h2>A universe taking shape</h2></div><p>Each image opens a different room. The final products will arrive only after sampling, fit review, material confirmation and careful preparation.</p></div><div class="universe">
+      <article class="world"><img src="/assets/unnahana/editorial/timeless-moodboard.webp" alt="Textile moodboard with garment sketches and Melbourne references"><div class="copy"><span>The wardrobe</span><h3>Quietly expressive clothing</h3><p>Relaxed silhouettes, earthy colour and textile memory designed to move between work, gatherings and everyday life.</p><div class="coming">Taking shape</div></div></article>
+      <article class="world"><img src="/assets/unnahana/editorial/atelier-desk.webp" alt="Design desk with garment sketches, fabrics and an earthy colour palette"><div class="copy"><span>The textile library</span><h3>Pattern, placement and proportion</h3><p>Motifs are explored through scale, borders, colour balance and the spaces left intentionally quiet.</p><div class="coming">Being developed</div></div></article>
+      <article class="world carry"><img src="/assets/unnahana/totes/krishna.svg" alt="Krishna-inspired tote bag with deep blue botanical illustration"><div class="copy"><span>Everyday objects</span><h3>Stories that travel with you</h3><p>Useful pieces carrying devotion, humour, food memory and fragments of home into ordinary days.</p><div class="coming">Returning with clarity</div></div></article>
+      <article class="world"><img src="/assets/unnahana/editorial/timeless-hero.webp" alt="Ivory printed garment styled in a warm contemporary setting"><div class="copy"><span>The arrival</span><h3>Melbourne meets India</h3><p>Different roots share one city, expressed through modern styling rather than costume or nostalgia.</p><div class="coming">Almost at the door</div></div></article>
+    </div></div></section>
+
+    <section class="section promise" id="glimpse"><div class="wrap"><div class="eyebrow">What is coming</div><h2>Not one collection. A living wardrobe.</h2><div class="promise-grid"><div class="promise-card"><strong>Clothing</strong><span>Everyday layers, workwear directions, occasion pieces and adaptable silhouettes.</span></div><div class="promise-card"><strong>Textiles</strong><span>Print stories informed by place, memory, architecture, nature and movement.</span></div><div class="promise-card"><strong>Accessories</strong><span>Useful objects designed to carry personality without losing practicality.</span></div><div class="promise-card"><strong>Stories</strong><span>The people, references and decisions behind each release, shared with care.</span></div></div></div></section>
+
+    <section class="section closing" id="stay-close"><div class="wrap"><div class="eyebrow">The doors are not open yet</div><h2>But the lights are on.</h2><p>Stay close for the first release, sampling notes and the moment UNNAHANA becomes ready to enter properly.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="mailto:hello@geyvak.com?subject=UNNAHANA%20Updates">Keep me close</a><a class="btn secondary" href="/">Return to Geyvak</a></div></div></section>
+  </main>
+  <footer><div class="wrap foot"><div class="brand">UNNAHANA</div><div class="small">A Geyvak fashion and lifestyle universe. Product details will be published only when they are ready to be supported.</div></div></footer>
 </body>
 </html>
