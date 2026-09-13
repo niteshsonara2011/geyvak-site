@@ -29,7 +29,7 @@
     <section class="section soft" id="universe"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Four glimpses</div><h2>A universe taking shape</h2></div><p>Each image opens a different room. Tap any visual to see the larger stored artwork. Final products arrive only after sampling, fit review, material confirmation and careful preparation.</p></div><div class="universe">
       <article class="world"><a class="image-link" href="/assets/unnahana/catalogue/unnahana-modern-working-set.jpg" target="_blank" rel="noopener" aria-label="Open The Wardrobe image full size"><img src="/assets/unnahana/catalogue/unnahana-modern-working-set.webp" alt="UNNAHANA contemporary wardrobe styling"><span class="view-cue">View full image ↗</span></a><div class="copy"><span>The wardrobe</span><h3>Quietly expressive clothing</h3><p>Relaxed silhouettes, earthy colour and textile memory designed to move between work, gatherings and everyday life.</p><div class="coming">Taking shape</div></div></article>
       <article class="world"><a class="image-link" href="/assets/unnahana/catalogue/unnahana-fabric-product-catalogue.jpg" target="_blank" rel="noopener" aria-label="Open The Textile Library image full size"><img src="/assets/unnahana/catalogue/unnahana-fabric-product-catalogue.webp" alt="UNNAHANA textile and product visual library"><span class="view-cue">View full image ↗</span></a><div class="copy"><span>The textile library</span><h3>Pattern, placement and proportion</h3><p>Motifs are explored through scale, borders, colour balance and the spaces left intentionally quiet.</p><div class="coming">Being developed</div></div></article>
-      <article class="world carry"><a class="image-link" href="/assets/unnahana/gurushala-vgt-bag.svg?v=20260913" target="_blank" rel="noopener" aria-label="Open Gurushala VGT tote bag image full size"><img src="/assets/unnahana/gurushala-vgt-bag.svg?v=20260913" alt="Gurushala tote bag with colourful learning tree identity"><span class="view-cue">View full image ↗</span></a><div class="copy"><span>Gurushala (VGT)</span><h3>Carry learning forward</h3><p>A Gurushala-linked tote bringing the spirit of learn, grow, create and serve into everyday life.</p><div class="coming">New Gurushala edition</div></div></article>
+      <article class="world carry"><a id="gurushala-tote-link" class="image-link" href="/assets/unnahana/gurushala-vgt-bag.svg?v=20260913b" target="_blank" rel="noopener" aria-label="Open Gurushala VGT tote bag image full size"><img id="gurushala-tote-image" src="/assets/unnahana/gurushala-vgt-bag.svg?v=20260913b" alt="Gurushala tote bag with colourful learning tree identity" decoding="async"><span class="view-cue">View full image ↗</span></a><div class="copy"><span>Gurushala (VGT)</span><h3>Carry learning forward</h3><p>A Gurushala-linked tote bringing the spirit of learn, grow, create and serve into everyday life.</p><div class="coming">New Gurushala edition</div></div></article>
       <article class="world"><a class="image-link" href="/unnahana-gallery.html" aria-label="Open UNNAHANA visual gallery"><img src="/assets/unnahana/catalogue/unnahana-fabric-product-catalogue.webp" alt="UNNAHANA textile and product visual archive"><span class="view-cue">Open gallery ↗</span></a><div class="copy"><span>The gallery</span><h3>More rooms are opening</h3><p>A curated visual library of clothing, print, accessories and collection directions already taking shape.</p><a class="coming" href="/unnahana-gallery.html">Explore the gallery</a></div></article>
     </div></div></section>
 
@@ -38,5 +38,23 @@
     <section class="section closing" id="stay-close"><div class="wrap"><div class="eyebrow">The doors are not open yet</div><h2>But the lights are on.</h2><p>Stay close for the first release, sampling notes and the moment UNNAHANA becomes ready to enter properly.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="mailto:hello@geyvak.com?subject=UNNAHANA%20Updates">Keep me close</a><a class="btn secondary" href="/unnahana-gallery.html">Browse the gallery</a><a class="btn secondary" href="/">Return to Geyvak</a></div></div></section>
   </main>
   <footer><div class="wrap foot"><a class="brand-logo-final" href="/unnahana.html" aria-label="UNNAHANA by GEYVAK home"><img src="/assets/unnahana/unnahana-logo-final.svg" alt="UNNAHANA by GEYVAK"></a><div class="small">A Geyvak fashion and lifestyle universe. Product details will be published only when they are ready to be supported.</div></div></footer>
+  <script>
+    (async function(){
+      const img=document.getElementById('gurushala-tote-image');
+      const link=document.getElementById('gurushala-tote-link');
+      if(!img||!link)return;
+      try{
+        const response=await fetch('/assets/unnahana/gurushala-vgt-bag-inline.txt?v=20260913c',{cache:'no-store'});
+        if(!response.ok)return;
+        const base64=(await response.text()).replace(/\s/g,'');
+        if(!base64.startsWith('/9j/'))return;
+        const photo='data:image/jpeg;base64,'+base64;
+        img.src=photo;
+        link.href=photo;
+      }catch(error){
+        /* Keep the verified SVG fallback if the photograph cannot be loaded. */
+      }
+    })();
+  </script>
 </body>
 </html>
