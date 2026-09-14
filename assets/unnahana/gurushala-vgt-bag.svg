@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+<title id="title">Gurushala VGT tote bag</title>
+<desc id="desc">Cream tote bag with the Gurushala learning tree identity and colourful leaf accents.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5ead8"/><stop offset="1" stop-color="#e7d5bd"/></linearGradient>
+  <linearGradient id="bag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#efe2cb"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="26" stdDeviation="28" flood-color="#5c4939" flood-opacity=".23"/></filter>
+</defs>
+<rect width="1200" height="1200" fill="url(#bg)"/>
+<g opacity=".33" fill="#42634f"><path d="M85 160c90-70 125-76 170-64-46 42-77 73-136 91z"/><path d="M980 115c74-41 107-42 151-28-37 32-67 54-119 66z"/></g>
+<g filter="url(#shadow)">
+  <path d="M320 350c15-156 103-238 280-238s265 82 280 238" fill="none" stroke="#f5ead8" stroke-width="52" stroke-linecap="round"/>
+  <path d="M320 350c15-156 103-238 280-238s265 82 280 238" fill="none" stroke="#d8c6aa" stroke-width="3" opacity=".55"/>
+  <path d="M205 330h790l-38 660c-2 41-35 74-76 74H319c-41 0-74-33-76-74z" fill="url(#bag)" stroke="#d9c8aa" stroke-width="4"/>
+  <path d="M205 330h790" stroke="#d5c2a3" stroke-width="10"/>
+  <path d="M310 330v90M890 330v90" stroke="#d9c6a8" stroke-width="22" opacity=".7"/>
+</g>
+<g transform="translate(245 560)">
+  <path d="M0 360C38 250 78 135 162 20" fill="none" stroke="#1f5b3d" stroke-width="12" stroke-linecap="round"/>
+  <ellipse cx="45" cy="280" rx="42" ry="20" transform="rotate(-31 45 280)" fill="#4ea66b"/>
+  <ellipse cx="76" cy="220" rx="46" ry="22" transform="rotate(34 76 220)" fill="#eb8db3"/>
+  <ellipse cx="95" cy="165" rx="45" ry="21" transform="rotate(-34 95 165)" fill="#f2b426"/>
+  <ellipse cx="128" cy="108" rx="47" ry="22" transform="rotate(31 128 108)" fill="#cc6e4a"/>
+  <ellipse cx="154" cy="54" rx="44" ry="20" transform="rotate(-27 154 54)" fill="#1f5b3d"/>
+</g>
+<g transform="translate(600 600)" text-anchor="middle">
+  <path d="M-190 10A210 210 0 0 1 190 10" fill="none" stroke="#f2b426" stroke-width="10"/>
+  <g transform="translate(0 -35)">
+    <path d="M-82 108Q-42 54 0 95Q42 54 82 108Q42 105 0 142Q-42 105-82 108Z" fill="#1f5b3d"/>
+    <circle cx="0" cy="24" r="18" fill="#15382b"/>
+    <path d="M0 44c-29 19-45 52-51 83M0 44c29 19 45 52 51 83" fill="none" stroke="#15382b" stroke-width="17" stroke-linecap="round"/>
+    <g>
+      <ellipse cx="-86" cy="4" rx="23" ry="38" fill="#4ea6a6" transform="rotate(-40 -86 4)"/>
+      <ellipse cx="-45" cy="-36" rx="23" ry="38" fill="#a8d5b7" transform="rotate(-28 -45 -36)"/>
+      <ellipse cx="0" cy="-58" rx="23" ry="38" fill="#f2b426"/>
+      <ellipse cx="45" cy="-36" rx="23" ry="38" fill="#cc6e4a" transform="rotate(28 45 -36)"/>
+      <ellipse cx="86" cy="4" rx="23" ry="38" fill="#eb8db3" transform="rotate(40 86 4)"/>
+      <ellipse cx="-70" cy="55" rx="22" ry="34" fill="#1f5b3d" transform="rotate(-52 -70 55)"/>
+      <ellipse cx="70" cy="55" rx="22" ry="34" fill="#4ea6a6" transform="rotate(52 70 55)"/>
+    </g>
+  </g>
+  <text y="205" font-family="Arial,Helvetica,sans-serif" font-size="92" font-weight="700" fill="#15382b">Gurushala</text>
+  <text y="262" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" letter-spacing="8" fill="#1f5b3d">LEARN</text>
+  <circle cx="-117" cy="253" r="5" fill="#d9a42b"/><circle cx="117" cy="253" r="5" fill="#d9a42b"/>
+  <text x="-5" y="306" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" letter-spacing="5" fill="#cc6e4a">GROW</text>
+  <text x="0" y="347" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" letter-spacing="4" fill="#eb8db3">CREATE</text>
+  <text x="0" y="388" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" letter-spacing="5" fill="#4ea6a6">SERVE</text>
+</g>
+<g transform="translate(964 555)"><rect width="38" height="120" rx="4" fill="#f5ead8" stroke="#d9c8aa"/><path d="M19 18v82" stroke="#1f5b3d" stroke-width="4"/><ellipse cx="19" cy="28" rx="10" ry="15" fill="#4ea66b"/><text x="19" y="112" text-anchor="middle" font-family="Arial" font-size="10" fill="#15382b" transform="rotate(90 19 112)">VGT</text></g>
+</svg>
